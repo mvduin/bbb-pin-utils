@@ -96,18 +96,18 @@ while( <> ) {
 	/^pin (\d+) \(44e1([0-9a-f]{4})(?:\.0)?\) 000000([0-7][0-9a-f]) pinctrl-single\z/ or die "parse error";
 	my $pin = $1;
 	my $reg = hex $2;
-	my $mux = hex $3;
+	my $conf = hex $3;
 	0x800 + 4 * $pin == $reg  or die "sanity check failed";
 
 	my $label = $data[ $pin ][ 8 ] // next;
 	my $boring = $label =~ s/^-// ? 2 : $label !~ /^P[89]\./;
         next if $boring > $verbose;
 
-	my $slew = ( "$D{fast}", "$R{slow}" )[ $mux >> 6 & 1 ];
-	my $rx = ( "  ", "$G{rx}" )[ $mux >> 5 & 1 ];
-	my $pull = ( "$DG{down}", " $DR{up} " )[ $mux >> 4 & 1 ];
-	$pull = "    " if $mux >> 3 & 1;
-	$mux &= 7;
+	my $slew = ( "$D{fast}", "$R{slow}" )[ $conf >> 6 & 1 ];
+	my $rx = ( "  ", "$G{rx}" )[ $conf >> 5 & 1 ];
+	my $pull = ( "$DG{down}", " $DR{up} " )[ $conf >> 4 & 1 ];
+	$pull = "    " if $conf >> 3 & 1;
+	my $mux = $conf & 7;
 
 	my $function = $data[ $pin ][ $mux ];
 	$function = "$BR{INVALID}"  if $function eq '-';
@@ -119,10 +119,12 @@ while( <> ) {
 		$function .= " ";
 		if( $gi->{out} ) {
 			$function .= $gi->{value} ? $BR{hi} : $G{lo};
-			$function .= $Y{" >>"}  if $gi->{out};
-		} else {
-			$function .= $Y{"<< "}  unless $gi->{out};
+			$function .= $Y{" >>"};
+		} elsif( $conf >> 5 & 1 ) {
+			$function .= $Y{"<< "};
 			$function .= $gi->{value} ? $R{hi} : $DG{lo};
+		} else {
+			$function .= $D{"<!   "};
 		}
 		$function .= " ";
 		$usage[ $pin ][0] = $gi->{name}  if $gi->{name};
