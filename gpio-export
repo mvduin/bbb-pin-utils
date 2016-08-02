@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+fail() {
+	echo "$*" >&2
+	exit 1
+}
+
+usage() {
+	fail "Usage: gpio-export [-q|--quiet] GPIOS..."
+}
+
+[[ $# -gt 0 ]] || usage
+
+quiet=
+
+while [[ "$1" == -* ]]; do
+	opt="$1"
+	shift
+	case "$opt" in
+		-q | --quiet ) quiet=1 ;;
+		-- )	break ;;
+		* )	usage ;;
+	esac
+done
+
+set -- `gpio-parse --kernel -- "$@"`
+
+cd /sys/class/gpio
+
+for i in "$@"; do
+	if [[ ! -e gpio$i ]]; then
+		echo $i >export
+	fi
+	[[ -d gpio$i ]]
+	[[ $quiet ]] || echo "$PWD/gpio$i"
+done
