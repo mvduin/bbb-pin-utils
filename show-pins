@@ -213,8 +213,8 @@ mmc 0 d0		gpmc a23		uart 5 rts		uart 3 txd		uart 1 ri		pru 0 out 11		pru 0 in 11
 mmc 0 clk		gpmc a24		uart 3 cts		uart 2 rxd		can 1 tx		pru 0 out 12		pru 0 in 12		gpio 2.30		μSD clk
 mmc 0 cmd		gpmc a25		uart 3 rts		uart 2 txd		can 1 rx		pru 0 out 13		pru 0 in 13		gpio 2.31		μSD cmd
 mii 0 col		rmii 1 refclk		spi 1 clk		uart 5 rxd		asp 1 data 2		mmc 2 d3		asp 0 data 2		gpio 3.00		eth mii col
-mii 0 crs		rmii 0 crs/rxdv		spi 1 data 0		i²c 1 sda		asp 1 tx clk		uart 5 cts		uart 2 rxd		gpio 3.01		eth mii crs
-mii 0 rxer		rmii 0 rxer		spi 1 data 1		i²c 1 scl		asp 1 tx fs		uart 5 rts		uart 2 txd		gpio 3.02		eth mii rx err
+mii 0 crs		rmii 0 crs/rxdv		spi 1 d0 miso		i²c 1 sda		asp 1 tx clk		uart 5 cts		uart 2 rxd		gpio 3.01		eth mii crs
+mii 0 rxer		rmii 0 rxer		spi 1 d1 mosi		i²c 1 scl		asp 1 tx fs		uart 5 rts		uart 2 txd		gpio 3.02		eth mii rx err
 mii 0 txen		rmii 0 txen		rgmii 0 txctl		timer 4			asp 1 data 0		qep 0 index		mmc 2 cmd		gpio 3.03		eth mii tx en
 mii 0 rxdv		lcd mclk		rgmii 0 rxctl		uart 5 txd		asp 1 tx clk		mmc 2 d0		asp 0 rx clk		gpio 3.04		eth mii rx dv
 mii 0 txd3		can 0 tx		rgmii 0 txd3		uart 4 rxd		asp 1 tx fs		mmc 2 d1		asp 0 rx fs		gpio 0.16		eth mii tx d3
@@ -231,13 +231,13 @@ rmii 0 refclk		dma event 2		spi 1 cs 0		uart 5 txd		asp 1 data 3		mmc 0 pow		asp
 mdio data		timer 6			uart 5 rxd		uart 3 cts		mmc 0 cd		mmc 1 cmd		mmc 2 cmd		gpio 0.00		eth mdio
 mdio clk		timer 5			uart 5 txd		uart 3 rts		mmc 0 wp		mmc 1 clk		mmc 2 clk		gpio 0.01		eth mdc
 spi 0 clk		uart 2 rxd		i²c 2 sda		pwm 0 out A		uart pru cts		pru edio sof		jtag emu 2		gpio 0.02		P9.22 / spi boot clk
-spi 0 data 0		uart 2 txd		i²c 2 scl		pwm 0 out B		uart pru rts		pru edio latch		jtag emu 3		gpio 0.03		P9.21 / spi boot in
-spi 0 data 1		mmc 1 wp		i²c 1 sda		pwm 0 tripzone		uart pru rxd		pru edio in 0		pru edio out 0		gpio 0.04		P9.18 / spi boot out
+spi 0 d0 miso		uart 2 txd		i²c 2 scl		pwm 0 out B		uart pru rts		pru edio latch		jtag emu 3		gpio 0.03		P9.21 / spi boot in
+spi 0 d1 mosi		mmc 1 wp		i²c 1 sda		pwm 0 tripzone		uart pru rxd		pru edio in 0		pru edio out 0		gpio 0.04		P9.18 / spi boot out
 spi 0 cs 0		mmc 2 wp		i²c 1 scl		pwm sync in		uart pru txd		pru edio in 1		pru edio out 1		gpio 0.05		P9.17 / spi boot cs
 spi 0 cs 1		uart 3 rxd		eCAP 1			mmc 0 pow		dma event 2		mmc 0 cd		jtag emu 4		gpio 0.06		μSD cd / jtag emu4
 eCAP 0			uart 3 txd		spi 1 cs 1		pru eCAP		spi 1 clk		mmc 0 wp		dma event 2		gpio 0.07		P9.42
-uart 0 cts		uart 4 rxd		can 1 tx		i²c 1 sda		spi 1 data 0		timer 7			pru edc sync 0 out	gpio 1.08		-×
-uart 0 rts		uart 4 txd		can 1 rx		i²c 1 scl		spi 1 data 1		spi 1 cs 0		pru edc sync 1 out	gpio 1.09		-TP9
+uart 0 cts		uart 4 rxd		can 1 tx		i²c 1 sda		spi 1 d0 miso		timer 7			pru edc sync 0 out	gpio 1.08		-×
+uart 0 rts		uart 4 txd		can 1 rx		i²c 1 scl		spi 1 d1 mosi		spi 1 cs 0		pru edc sync 1 out	gpio 1.09		-TP9
 uart 0 rxd		spi 1 cs 0		can 0 tx		i²c 2 sda		eCAP 2			pru 1 out 14		pru 1 in 14		gpio 1.10		console in
 uart 0 txd		spi 1 cs 1		can 0 rx		i²c 2 scl		eCAP 1			pru 1 out 15		pru 1 in 15		gpio 1.11		console out
 uart 1 cts		timer 6			can 0 tx		i²c 2 sda		spi 1 cs 0		uart pru cts		pru edc latch 0		gpio 0.12		P9.20 / cape i²c sda
@@ -247,8 +247,8 @@ uart 1 txd		mmc 2 wp		can 1 rx		i²c 1 scl		-			uart pru txd		pru 0 in 16		gpio 
 i²c 0 sda		timer 4			uart 2 cts		eCAP 2			-			-			-			gpio 3.05		local i²c sda
 i²c 0 scl		timer 7			uart 2 rts		eCAP 1			-			-			-			gpio 3.06		local i²c scl
 asp 0 tx clk		pwm 0 out A		-			spi 1 clk		mmc 0 cd		pru 0 out 0		pru 0 in 0		gpio 3.14		P9.31 / hdmi audio clk
-asp 0 tx fs		pwm 0 out B		-			spi 1 data 0		mmc 1 cd		pru 0 out 1		pru 0 in 1		gpio 3.15		P9.29 / hdmi audio fs
-asp 0 data 0		pwm 0 tripzone		-			spi 1 data 1		mmc 2 cd		pru 0 out 2		pru 0 in 2		gpio 3.16		P9.30
+asp 0 tx fs		pwm 0 out B		-			spi 1 d0 miso		mmc 1 cd		pru 0 out 1		pru 0 in 1		gpio 3.15		P9.29 / hdmi audio fs
+asp 0 data 0		pwm 0 tripzone		-			spi 1 d1 mosi		mmc 2 cd		pru 0 out 2		pru 0 in 2		gpio 3.16		P9.30
 asp 0 rx hclk		pwm sync in		asp 0 data 2		spi 1 cs 0		eCAP 2			pru 0 out 3		pru 0 in 3		gpio 3.17		P9.28 / hdmi audio data
 asp 0 rx clk		qep 0 in A		asp 0 data 2		asp 1 tx clk		mmc 0 wp		pru 0 out 4		pru 0 in 4		gpio 3.18		P9.42
 asp 0 rx fs		qep 0 in B		asp 0 data 3		asp 1 tx fs		jtag emu 2		pru 0 out 5		pru 0 in 5		gpio 3.19		P9.27
