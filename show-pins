@@ -62,10 +62,10 @@ while( <> ) {
 	/\G (\S+)/gc  or die;
 	my @path = split m!:!, $1;
 	s/^(.*)\.([^.]+)\z/$2\@$1/ for @path;
-	$addr = join '/', @path;
+	my $path = join '/', @path;
 	/\G \(GPIO UNCLAIMED\)/gc  or die;
 	/\G function (\S+) group (\S+)\s*\z/gc && $1 eq $2  or die;
-	$usage[ $pin ] = [ $addr, $1 ];
+	$usage[ $pin ] = [ $path, $1 ];
 }
 
 
