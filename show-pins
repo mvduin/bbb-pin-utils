@@ -74,13 +74,16 @@ my @data = map { chomp; [ split /\t+/ ] } grep /^[^#]/, <DATA>;
 
 my @gpio;
 
-for my $path ( glob '/sys/bus/platform/drivers/gpio-of-helper/*/status' ) {
-	open my $fh, '<', $path  or warn( "open $path: $!\n" ), next;
-	while( <$fh> ) {
-		/^\s*\d+ (\S+)\s+(\d+)\s+(IN|OUT)\s/  or die;
-		die if $gpio[ $2 ];
-		$gpio[ $2 ] = { name => $1, dir => lc $3 };
-	}
+@ARGV = '/sys/kernel/debug/gpio';
+while( <> ) {
+	s/\s*\z//;
+	/^ / or next;
+	/^ gpio-(\d+) +\((?: +\|)?(.*)\) (in|out) +(lo|hi)(?: |\z)/ or die;
+	die if $gpio[ $1 ];
+	my %info = ( name => $2, out => $3 eq 'out', value => $4 eq 'hi' );
+	$gpio[ $1 ] = \%info;
+	$info{name} =~ s/\s*\z//;
+	delete $info{name}  if $info{name} =~ /^\??\z/;
 }
 
 
@@ -109,29 +112,30 @@ while( <> ) {
 	my $function = $data[ $pin ][ $mux ];
 	$function = "$BR{INVALID}"  if $function eq '-';
 
-	my %gi;
-	if( $function =~ /^gpio (\d)\.(\d\d)\b/ && $2 < 32 ) {
-		my $gpio = $1 * 32 + $2;
-		%gi = %{ $gpio[ $gpio ] // {} };
-		$usage[ $pin ][0] = $gi{name}  if $gi{name};
-		my $dir = "/sys/class/gpio/gpio$gpio";
-		if( -f "$dir/direction" && open my $fh, '<', "$dir/direction" ) {
-			chomp( my $value = <$fh> );
-			$gi{dir} = $value;
+	my $dir;
+	my $value;
+	if( $function =~ /^gpio (\d)\.(\d\d)\b/ && $2 < 32
+			&& ( my $gi = $gpio[ $1 * 32 + $2 ] ) ) {
+		$function .= " ";
+		if( $gi->{out} ) {
+			$function .= $gi->{value} ? $BR{hi} : $G{lo};
+			$function .= $Y{" >>"}  if $gi->{out};
+		} else {
+			$function .= $Y{"<< "}  unless $gi->{out};
+			$function .= $gi->{value} ? $R{hi} : $DG{lo};
 		}
-		if( -f "$dir/value" && open my $fh, '<', "$dir/value" ) {
-			chomp( my $value = <$fh> );
-			$gi{dir} //= '=';
-			$function .= " $gi{dir} $value";
-		}
-	};
+		$function .= " ";
+		$usage[ $pin ][0] = $gi->{name}  if $gi->{name};
+	} else {
+		$function = sprintf "%-16s", $function;
+	}
 
 	if( $usage[ $pin ] ) {
 		my( $dev, $group ) = @{ $usage[ $pin ] };
-		$function = sprintf "%-16s %s", $function, $Y{$dev};
+		$function .= " $Y{$dev}";
 		$function .= " " . $D{"($group)"}  if defined $group;
-	} elsif( $function =~ /^gpio / || $boring > 1 ) {
-			$function = $D{$function};
+	} elsif( $function =~ /^gpio \d\.\d\d *\z/ || $boring > 1 ) {
+		$function = $D{$function};
 	}
 
 	$function = qq/$slew $rx $pull $Y{$mux} $function/;
