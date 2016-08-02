@@ -78,12 +78,28 @@ my @gpio;
 while( <> ) {
 	s/\s*\z//;
 	/^ / or next;
-	/^ gpio-(\d+) +\((?: +\|)?(.*)\) (in|out) +(lo|hi)(?: |\z)/ or die;
-	die if $gpio[ $1 ];
-	my %info = ( name => $2, out => $3 eq 'out', value => $4 eq 'hi' );
-	$gpio[ $1 ] = \%info;
-	$info{name} =~ s/\s*\z//;
-	delete $info{name}  if $info{name} =~ /^\??\z/;
+	/^ gpio-(\d+) +\(/gc  or die;
+	my $index = $1;
+	die if $gpio[ $index ];
+	my %info;
+	if( /\G(.{20,31})\|/gc ) {
+		$info{label} = $1;
+		$info{label} =~ s/\s+\z//;
+		delete $info{label}  if $info{label} =~ /^\??\z/;
+	}
+	/\G(.{20,31})\)/gc  or die;
+	$info{consumer} = $1;
+	$info{consumer} =~ s/\s+\z//;
+	delete $info{consumer}  if $info{consumer} =~ /^\??\z/;
+
+	$info{name} = $info{consumer} // $info{label};
+	$info{name} // delete $info{name};
+	next if /\G\z/gc;
+
+	/\G (in|out) +(lo|hi)(?: |\z)/gc or die;
+	$info{out} = $1 eq 'out';
+	$info{value} = $2 eq 'hi';
+	$gpio[ $index ] = \%info;
 }
 
 
