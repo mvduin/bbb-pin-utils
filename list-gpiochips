@@ -1,0 +1,77 @@
+#!/usr/bin/perl
+
+# Matthijs van Duin - Dutch & Dutch
+
+use v5.20;
+use warnings qw( FATAL all );
+use experimental qw( signatures );
+use autodie;
+use File::Spec;
+use Cwd qw( realpath );
+
+
+# note: the _proper_ way of doing this would be using some libudev binding,
+# but this is simple and works in practice
+
+# slurp contents of file, chop off trailing newline or NUL-byte
+sub attr ( $path ) {
+	open my $fh, '<', $path;
+	my $data = do { local $/; <$fh> };
+	$data =~ s/[\n\0]\z//;
+	$data
+}
+
+# gather list of gpiochips with relevant attributes
+my @gpiochips;
+for my $syspath (glob '/sys/class/gpio/*') {
+	-f "$syspath/ngpio"  or next;
+
+	my %chip;
+	$chip{syspath} = $syspath;
+	$chip{base} = 0 + attr "$syspath/base";
+	$chip{count} = 0 + attr "$syspath/ngpio";
+	$chip{label} = '?';
+
+	# determine device-tree node
+	for( $syspath, "$syspath/device" ) {
+		my $node = "$_/of_node";
+		-l $node  or next;
+		$node = File::Spec->rel2abs( readlink $node, $_ );
+		$node = realpath $node;
+		$node =~ s!^/sys/firmware/devicetree/base!!  or die;
+		$chip{node} = $node;
+		last;
+	}
+	$chip{node}  or die;
+
+	push @gpiochips, \%chip;
+}
+
+# index by dt node
+my %gpiochip = map { $_->{node} => $_ } @gpiochips;
+
+# try to find slightly more human-friendly labels
+if( chdir '/sys/firmware/devicetree/base/aliases' ) {
+	for( glob 'gpio*' ) {
+		my $node = attr $_;
+		my $chip = $gpiochip{ $node }  or next;
+		$chip->{label} = $_;
+	}
+}
+if( chdir '/sys/firmware/devicetree/base/__symbols__' ) {
+	for( glob 'gpio*' ) {
+		my $node = attr $_;
+		my $chip = $gpiochip{ $node }  or next;
+		$chip->{label} = "&$_";
+	}
+}
+
+# sort list
+@gpiochips = sort { $a->{base} <=> $b->{base} } @gpiochips;
+
+# display results
+for my $chip ( @gpiochips ) {
+	my $first = $chip->{base};
+	my $last = $first + $chip->{count} - 1;
+	say "$chip->{label} ($chip->{node}): $first ... $last";
+}
