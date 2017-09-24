@@ -56,8 +56,10 @@ while( <> ) {
 	/^pin/gc  or next;
 	/\G +(0|[1-9]\d*) +\((\w+)(?:\.0)?\):/gc  or die;
 	my $pin = 0 + $1;
-	my $addr = hex $2;
-	( $addr & 0x7ff ) == 4 * $pin  or die;
+	if( $2 ne "PIN$pin" ) {
+		my $addr = hex $2;
+		( $addr & 0x7ff ) == 4 * $pin  or die;
+	}
 	next if /\G \(MUX UNCLAIMED\)/gc;
 	/\G (\S+)/gc  or die;
 	my @path = split m!:!, $1;
@@ -107,13 +109,17 @@ while( <> ) {
 
 while( <> ) {
 	s/\s*\z//;
-	/^pin / or next;
+	/^pin/gc  or next;
 
-	/^pin (\d+) \(44e1([0-9a-f]{4})(?:\.0)?\) 000000([0-7][0-9a-f]) pinctrl-single\z/ or die "parse error";
-	my $pin = $1;
-	my $reg = hex $2;
-	my $conf = hex $3;
-	0x800 + 4 * $pin == $reg  or die "sanity check failed";
+	/\G (0|[1-9]\d*) /gc  or die "parse error";
+	my $pin = 0 + $1;
+
+	/\G(?|\(PIN$pin\) ([0-9a-f]{8})(?:\.0)?|\(([0-9a-f]{8})(?:\.0)?\)) /gc
+		or die "parse error";
+	hex $1 == 0x44e10800 + 4 * $pin  or die "sanity check failed";
+
+	/\G000000([0-7][0-9a-f]) pinctrl-single\z/ or die "parse error";
+	my $conf = hex $1;
 
 	my $label = $data[ $pin ][ 8 ] // next;
 	my $boring = $label =~ s/^-// ? 2 : $label !~ /^P[89]\./;
