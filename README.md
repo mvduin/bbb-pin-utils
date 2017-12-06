@@ -37,7 +37,7 @@ If a pin has additional connections on the BBB or other special considerations, 
 * **hdmi audio**: connected to HDMI framer; used for audio output if HDMI audio is enabled.
 * **audio osc**: audio oscillator output, if enabled (e.g. when HDMI audio is enabled).
 * **cape i²c**: configured as I²C bus by the default Device Tree.
-* **spi boot**: depending on boot config, the ROM bootloader may configure these pins as SPI and attempt to boot from an SPI flash. This happens in particular if the S2 button is held down at power-on and no bootable μSD card is present.
+* **spi boot**: depending on boot config, the ROM bootloader may configure these pins as SPI and attempt to boot from an SPI flash. This happens in particular if the S2 button is held down at power-on.
 * **jtag emu**: only relevant when using high-speed system trace via the JTAG header.
 
 ### Pin index
