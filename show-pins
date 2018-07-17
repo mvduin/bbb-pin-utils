@@ -199,7 +199,7 @@ while( <> ) {
 		if( $gi->{out} ) {
 			$function .= $gi->{value} ? $BR{hi} : $G{lo};
 			$function .= $Y{" >>"};
-		} elsif( $conf >> 5 & 1 ) {
+		} elsif( $conf >> 18 & 1 ) {
 			$function .= $Y{"<< "};
 			$function .= $gi->{value} ? $R{hi} : $DG{lo};
 		} else {
