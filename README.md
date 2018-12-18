@@ -1,12 +1,14 @@
 # show-pins
 
-This perl script gives a nicely formatted overview of the current pin configuration of your BeagleBone Black.
+This perl script gives a nicely formatted overview of the current pin configuration of your BeagleBoard-X15.
+
+**CAUTION**: this BeagleBoard-X15 version of the show-pins script is experimental, and its peripheral numbering may in some cases be off by one compared to TRM and/or DT. The documentation below is for the BeagleBone Black and has not been updated for this version.
 
 ## Installation
 
 ```bash
 cd /usr/local/sbin
-sudo wget -N https://raw.githubusercontent.com/mvduin/bbb-pin-utils/master/show-pins
+sudo wget -N https://raw.githubusercontent.com/mvduin/bbb-pin-utils/bbx15-experimental/show-pins
 sudo chmod a+x show-pins
 ```
 
