@@ -50,8 +50,14 @@ while( @ARGV && $ARGV[0] =~ s/^-v/-/ ) {
 }
 die "unexpected argument: $ARGV[0]\n"  if @ARGV;
 
+sub setglob {
+	my( $pattern ) = @_;
+	@ARGV = glob $pattern;
+	@ARGV = $pattern  if @ARGV != 1;
+}
 
-@ARGV = '/sys/kernel/debug/pinctrl/4a003400.pinmux/pinmux-pins';
+
+setglob '/sys/kernel/debug/pinctrl/4a003400.*/pinmux-pins';
 my @usage;
 while( <> ) {
 	local $SIG{__DIE__} = sub { die "@_$_\n" };
@@ -160,8 +166,7 @@ while( <> ) {
 }
 
 
-@ARGV = '/sys/kernel/debug/pinctrl/4a003400.pinmux/pins';
-
+setglob '/sys/kernel/debug/pinctrl/4a003400.*/pins';
 while( <> ) {
 	s/\s*\z//;
 	/^pin/gc  or next;
