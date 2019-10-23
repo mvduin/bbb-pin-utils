@@ -183,7 +183,7 @@ while( <> ) {
 	die "invalid pad conf: $_" if $conf & 0xfcf0fe00;
 
 	my $label = $data[ $pin ][ 15 ] // next;
-	my $boring = ( $label =~ s/^-// ) + ( $label !~ /^P1[6-9]\./ );
+	my $boring = ( $label =~ s/^-// ) + ( $label !~ /^P\d+\./ );
         next if $boring > $verbose or $label eq '';
 
 	my $slew = ( "$D{fast}", "$R{slow}" )[ $conf >> 19 & 1 ];
