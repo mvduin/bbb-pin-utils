@@ -231,285 +231,285 @@ while( <> ) {
 }
 
 __DATA__
-gpmc d0			-			vin 1.0a d0		vout 2 d0		-			-			-			-			-			-			-			-			-			-			gpio 0.06		P16.51 "gpmc_ad0"  / sysboot0 (H/L)
-gpmc d1			-			vin 1.0a d1		vout 2 d1		-			-			-			-			-			-			-			-			-			-			gpio 0.07		P16.52 "gpmc_ad1"  / sysboot1 (H)
-gpmc d2			-			vin 1.0a d2		vout 2 d2		-			-			-			-			-			-			-			-			-			-			gpio 0.08		P16.16 "gpmc_ad2"  / sysboot2 (L)
-gpmc d3			-			vin 1.0a d3		vout 2 d3		-			-			-			-			-			-			-			-			-			-			gpio 0.09		P16.22 "gpmc_ad3"  / sysboot3 (L)
-gpmc d4			-			vin 1.0a d4		vout 2 d4		-			-			-			-			-			-			-			-			-			-			gpio 0.10		P16.15 "gpmc_ad4"  / sysboot4 (H/L)
-gpmc d5			-			vin 1.0a d5		vout 2 d5		-			-			-			-			-			-			-			-			-			-			gpio 0.11		P16.18 "gpmc_ad5"  / sysboot5 (H/L)
-gpmc d6			-			vin 1.0a d6		vout 2 d6		-			-			-			-			-			-			-			-			-			-			gpio 0.12		P16.53 "gpmc_ad6"  / sysboot6 (L)
-gpmc d7			-			vin 1.0a d7		vout 2 d7		-			-			-			-			-			-			-			-			-			-			gpio 0.13		P16.54 "gpmc_ad7"  / sysboot7 (L)
-gpmc d8			-			vin 1.0a d8		vout 2 d8		-			-			-			-			-			-			-			-			-			-			gpio 6.18		P16.23 "gpmc_ad8"  / sysboot8 (H)
-gpmc d9			-			vin 1.0a d9		vout 2 d9		-			-			-			-			-			-			-			-			-			-			gpio 6.19		P16.57 "gpmc_ad9"  / sysboot9 (L)
-gpmc d10		-			vin 1.0a d10		vout 2 d10		-			-			-			-			-			-			-			-			-			-			gpio 6.28		P16.56 "gpmc_ad10" / sysboot10 (L)
-gpmc d11		-			vin 1.0a d11		vout 2 d11		-			-			-			-			-			-			-			-			-			-			gpio 6.29		P16.55 "gpmc_ad11" / sysboot11 (L)
-gpmc d12		-			vin 1.0a d12		vout 2 d12		-			-			-			-			-			-			-			-			-			-			gpio 0.18		P16.24 "gpmc_ad12" / sysboot12 (L)
-gpmc d13		-			vin 1.0a d13		vout 2 d13		-			-			-			-			-			-			-			-			-			-			gpio 0.19		P16.26 "gpmc_ad13" / sysboot13 (L)
-gpmc d14		-			vin 1.0a d14		vout 2 d14		-			-			-			-			-			-			-			-			-			-			gpio 0.20		P16.27 "gpmc_ad14" / sysboot14 (L)
-gpmc d15		-			vin 1.0a d15		vout 2 d15		-			-			-			-			-			-			-			-			-			-			gpio 0.21		P16.25 "gpmc_ad15" / sysboot15 (H)
-gpmc a0			-			vin 1.0a d16		vout 2 d16		vin 1.1a d0		-			vin 1.1b d0		i²c 3 scl		uart 4 rxd		-			-			-			-			-			gpio 6.03		P16.36 "gpmc_a0"
-gpmc a1			-			vin 1.0a d17		vout 2 d17		vin 1.1a d1		-			vin 1.1b d1		i²c 3 sda		uart 4 txd		-			-			-			-			-			gpio 6.04		P16.43 "gpmc_a1"
-gpmc a2			-			vin 1.0a d18		vout 2 d18		vin 1.1a d2		-			vin 1.1b d2		uart 6 rxd		uart 4 cts		-			-			-			-			-			gpio 6.05		P16.12 "gpmc_a2"
-gpmc a3			qspi cs2		vin 1.0a d19		vout 2 d19		vin 1.1a d3		-			vin 1.1b d3		uart 6 txd		uart 4 rts		-			-			-			-			-			gpio 6.06		P16.42 "gpmc_a3"
-gpmc a4			qspi cs3		vin 1.0a d20		vout 2 d20		vin 1.1a d4		-			vin 1.1b d4		i²c 4 scl		uart 5 rxd		-			-			-			-			-			gpio 0.26		P16.10 "gpmc_a4"
-gpmc a5			-			vin 1.0a d21		vout 2 d21		vin 1.1a d5		-			vin 1.1b d5		i²c 4 sda		uart 5 txd		-			-			-			-			-			gpio 0.27		P16.13 "gpmc_a5"
-gpmc a6			-			vin 1.0a d22		vout 2 d22		vin 1.1a d6		-			vin 1.1b d6		uart 7 rxd		uart 5 cts		-			-			-			-			-			gpio 0.28		P16.06 "gpmc_a6"
-gpmc a7			-			vin 1.0a d23		vout 2 d23		vin 1.1a d7		-			vin 1.1b d7		uart 7 txd		uart 5 rts		-			-			-			-			-			gpio 0.29		P16.45 "gpmc_a7"
-gpmc a8			-			vin 1.0a hsync		vout 2 hsync		-			-			vin 1.1b hsync		timer 11		spi 3 sclk		-			-			-			-			-			gpio 0.30		P16.09 "gpmc_a8"
-gpmc a9			-			vin 1.0a vsync		vout 2 vsync		-			-			vin 1.1b vsync		timer 10		spi 3 d1		-			-			-			-			-			gpio 0.31		P16.37 "gpmc_a9"
-gpmc a10		-			vin 1.0a de		vout 2 de		-			-			vin 1.1b clk		timer 9			spi 3 d0		-			-			-			-			-			gpio 1.00		P16.14 "gpmc_a10"
-gpmc a11		-			vin 1.0a fld		vout 2 fld		vin 1.1a fld		-			vin 1.1b de		timer 8			spi 3 cs0		-			-			-			-			-			gpio 1.01		P16.44 "gpmc_a11"
-gpmc a12		-			-			-			vin 1.1a clk		gpmc a0			vin 1.1b fld		timer 7			spi 3 cs1		dma event 0		-			-			-			-			gpio 1.02		P16.46 "gpmc_a12"
-gpmc a13		qspi rtclk		-			-			vin 1.1a hsync		-			-			timer 6			spi 3 cs2		dma event 1		-			-			-			-			gpio 1.03		P16.07 "gpmc_a13"
-gpmc a14		qspi d3			-			-			vin 1.1a vsync		-			-			timer 5			spi 3 cs3		-			-			-			-			-			gpio 1.04		P16.40 "gpmc_a14"
-gpmc a15		qspi d2			-			-			vin 1.1a d8		-			-			timer 4			-			-			-			-			-			-			gpio 1.05		P16.38 "gpmc_a15"
-gpmc a16		qspi d0			-			-			vin 1.1a d9		-			-			-			-			-			-			-			-			-			gpio 1.06		P16.39 "gpmc_a16"
-gpmc a17		qspi d1			-			-			vin 1.1a d10		-			-			-			-			-			-			-			-			-			gpio 1.07		P16.48 "gpmc_a17"
-gpmc a18		qspi sclk		-			-			vin 1.1a d11		-			-			-			-			-			-			-			-			-			gpio 1.08		P16.08 "gpmc_a18"
-gpmc a19		mmc 1 dat4		gpmc a13		-			vin 1.1a d12		-			vin 1.0b d0		-			-			-			-			-			-			-			gpio 1.09		eMMC dat4
-gpmc a20		mmc 1 dat5		gpmc a14		-			vin 1.1a d13		-			vin 1.0b d1		-			-			-			-			-			-			-			gpio 1.10		eMMC dat5
-gpmc a21		mmc 1 dat6		gpmc a15		-			vin 1.1a d14		-			vin 1.0b d2		-			-			-			-			-			-			-			gpio 1.11		eMMC dat6
-gpmc a22		mmc 1 dat7		gpmc a16		-			vin 1.1a d15		-			vin 1.0b d3		-			-			-			-			-			-			-			gpio 1.12		eMMC dat7
+gpmc d0			-			vin 1.0a d0		vout 2 d0		-			-			-			-			-			-			-			-			-			-			gpio 0.06		sysboot 0
+gpmc d1			-			vin 1.0a d1		vout 2 d1		-			-			-			-			-			-			-			-			-			-			gpio 0.07		sysboot 1
+gpmc d2			-			vin 1.0a d2		vout 2 d2		-			-			-			-			-			-			-			-			-			-			gpio 0.08		sysboot 2
+gpmc d3			-			vin 1.0a d3		vout 2 d3		-			-			-			-			-			-			-			-			-			-			gpio 0.09		sysboot 3
+gpmc d4			-			vin 1.0a d4		vout 2 d4		-			-			-			-			-			-			-			-			-			-			gpio 0.10		sysboot 4
+gpmc d5			-			vin 1.0a d5		vout 2 d5		-			-			-			-			-			-			-			-			-			-			gpio 0.11		sysboot 5
+gpmc d6			-			vin 1.0a d6		vout 2 d6		-			-			-			-			-			-			-			-			-			-			gpio 0.12		sysboot 6
+gpmc d7			-			vin 1.0a d7		vout 2 d7		-			-			-			-			-			-			-			-			-			-			gpio 0.13		sysboot 7
+gpmc d8			-			vin 1.0a d8		vout 2 d8		-			-			-			-			-			-			-			-			-			-			gpio 6.18		sysboot 8
+gpmc d9			-			vin 1.0a d9		vout 2 d9		-			-			-			-			-			-			-			-			-			-			gpio 6.19		sysboot 9
+gpmc d10		-			vin 1.0a d10		vout 2 d10		-			-			-			-			-			-			-			-			-			-			gpio 6.28		sysboot 10
+gpmc d11		-			vin 1.0a d11		vout 2 d11		-			-			-			-			-			-			-			-			-			-			gpio 6.29		sysboot 11
+gpmc d12		-			vin 1.0a d12		vout 2 d12		-			-			-			-			-			-			-			-			-			-			gpio 0.18		sysboot 12
+gpmc d13		-			vin 1.0a d13		vout 2 d13		-			-			-			-			-			-			-			-			-			-			gpio 0.19		sysboot 13
+gpmc d14		-			vin 1.0a d14		vout 2 d14		-			-			-			-			-			-			-			-			-			-			gpio 0.20		sysboot 14
+gpmc d15		-			vin 1.0a d15		vout 2 d15		-			-			-			-			-			-			-			-			-			-			gpio 0.21		sysboot 15
+gpmc a0			-			vin 1.0a d16		vout 2 d16		vin 1.1a d0		-			vin 1.1b d0		i²c 3 scl		uart 4 rxd		-			-			-			-			-			gpio 6.03		P9.19a
+gpmc a1			-			vin 1.0a d17		vout 2 d17		vin 1.1a d1		-			vin 1.1b d1		i²c 3 sda		uart 4 txd		-			-			-			-			-			gpio 6.04		P9.20a
+gpmc a2			-			vin 1.0a d18		vout 2 d18		vin 1.1a d2		-			vin 1.1b d2		uart 6 rxd		uart 4 cts		-			-			-			-			-			gpio 6.05		-
+gpmc a3			qspi cs2		vin 1.0a d19		vout 2 d19		vin 1.1a d3		-			vin 1.1b d3		uart 6 txd		uart 4 rts		-			-			-			-			-			gpio 6.06		-
+gpmc a4			qspi cs3		vin 1.0a d20		vout 2 d20		vin 1.1a d4		-			vin 1.1b d4		i²c 4 scl		uart 5 rxd		-			-			-			-			-			gpio 0.26		bluetooth in
+gpmc a5			-			vin 1.0a d21		vout 2 d21		vin 1.1a d5		-			vin 1.1b d5		i²c 4 sda		uart 5 txd		-			-			-			-			-			gpio 0.27		bluetooth out
+gpmc a6			-			vin 1.0a d22		vout 2 d22		vin 1.1a d6		-			vin 1.1b d6		uart 7 rxd		uart 5 cts		-			-			-			-			-			gpio 0.28		bluetooth cts
+gpmc a7			-			vin 1.0a d23		vout 2 d23		vin 1.1a d7		-			vin 1.1b d7		uart 7 txd		uart 5 rts		-			-			-			-			-			gpio 0.29		bluetooth rts
+gpmc a8			-			vin 1.0a hsync		vout 2 hsync		-			-			vin 1.1b hsync		timer 11		spi 3 sclk		-			-			-			-			-			gpio 0.30		-
+gpmc a9			-			vin 1.0a vsync		vout 2 vsync		-			-			vin 1.1b vsync		timer 10		spi 3 d1		-			-			-			-			-			gpio 0.31		-
+gpmc a10		-			vin 1.0a de		vout 2 de		-			-			vin 1.1b clk		timer 9			spi 3 d0		-			-			-			-			-			gpio 1.00		-
+gpmc a11		-			vin 1.0a fld		vout 2 fld		vin 1.1a fld		-			vin 1.1b de		timer 8			spi 3 cs0		-			-			-			-			-			gpio 1.01		-
+gpmc a12		-			-			-			vin 1.1a clk		gpmc a0			vin 1.1b fld		timer 7			spi 3 cs1		dma event 0		-			-			-			-			gpio 1.02		-
+gpmc a13		qspi rtclk		-			-			vin 1.1a hsync		-			-			timer 6			spi 3 cs2		dma event 1		-			-			-			-			gpio 1.03		-
+gpmc a14		qspi d3			-			-			vin 1.1a vsync		-			-			timer 5			spi 3 cs3		-			-			-			-			-			gpio 1.04		-
+gpmc a15		qspi d2			-			-			vin 1.1a d8		-			-			timer 4			-			-			-			-			-			-			gpio 1.05		-
+gpmc a16		qspi d0			-			-			vin 1.1a d9		-			-			-			-			-			-			-			-			-			gpio 1.06		-
+gpmc a17		qspi d1			-			-			vin 1.1a d10		-			-			-			-			-			-			-			-			-			gpio 1.07		-
+gpmc a18		qspi sclk		-			-			vin 1.1a d11		-			-			-			-			-			-			-			-			-			gpio 1.08		-
+gpmc a19		mmc 1 dat4		gpmc a13		-			vin 1.1a d12		-			vin 1.0b d0		-			-			-			-			-			-			-			gpio 1.09		eMMC d4
+gpmc a20		mmc 1 dat5		gpmc a14		-			vin 1.1a d13		-			vin 1.0b d1		-			-			-			-			-			-			-			gpio 1.10		eMMC d5
+gpmc a21		mmc 1 dat6		gpmc a15		-			vin 1.1a d14		-			vin 1.0b d2		-			-			-			-			-			-			-			gpio 1.11		eMMC d6
+gpmc a22		mmc 1 dat7		gpmc a16		-			vin 1.1a d15		-			vin 1.0b d3		-			-			-			-			-			-			-			gpio 1.12		eMMC d7
 gpmc a23		mmc 1 clk		gpmc a17		-			vin 1.1a fld		-			vin 1.0b d4		-			-			-			-			-			-			-			gpio 1.13		eMMC clk
-gpmc a24		mmc 1 dat0		gpmc a18		-			vin 1.1a d8		-			vin 1.0b d5		-			-			-			-			-			-			-			gpio 1.14		eMMC dat0
-gpmc a25		mmc 1 dat1		gpmc a19		-			vin 1.1a d9		-			vin 1.0b d6		-			-			-			-			-			-			-			gpio 1.15		eMMC dat1
-gpmc a26		mmc 1 dat2		gpmc a20		-			vin 1.1a d10		-			vin 1.0b d7		-			-			-			-			-			-			-			gpio 1.16		eMMC dat2
-gpmc a27		mmc 1 dat3		gpmc a21		-			vin 1.1a d11		-			vin 1.0b hsync		-			-			-			-			-			-			-			gpio 1.17		eMMC dat3
+gpmc a24		mmc 1 dat0		gpmc a18		-			vin 1.1a d8		-			vin 1.0b d5		-			-			-			-			-			-			-			gpio 1.14		eMMC d0
+gpmc a25		mmc 1 dat1		gpmc a19		-			vin 1.1a d9		-			vin 1.0b d6		-			-			-			-			-			-			-			gpio 1.15		eMMC d1
+gpmc a26		mmc 1 dat2		gpmc a20		-			vin 1.1a d10		-			vin 1.0b d7		-			-			-			-			-			-			-			gpio 1.16		eMMC d2
+gpmc a27		mmc 1 dat3		gpmc a21		-			vin 1.1a d11		-			vin 1.0b hsync		-			-			-			-			-			-			-			gpio 1.17		eMMC d3
 gpmc cs1		mmc 1 cmd		gpmc a22		-			vin 1.1a de		-			vin 1.0b vsync		-			-			-			-			-			-			-			gpio 1.18		eMMC cmd
-gpmc cs0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.19		P16.41 "gpmc_cs0"
-gpmc cs2		qspi cs0		-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.20		P16.49 "gpmc_cs2"
-gpmc cs3		qspi cs1		vin 1.0a clk		vout 2 clk		-			gpmc a1			-			-			-			-			-			-			-			-			gpio 1.21		P16.50 "gpmc_cs3"
-gpmc clk		gpmc cs7		clkout 0		gpmc wait1		vin 1.1a hsync		vin 1.1a de		vin 1.0b clk		timer 3			i²c 2 scl		dma event 0		-			-			-			-			gpio 1.22		P16.35 "gpmc_clk"
-gpmc advn ale		gpmc cs6		clkout 1		gpmc wait1		vin 1.1a vsync		gpmc a2			gpmc a23		timer 2			i²c 2 sda		dma event 1		-			-			-			-			gpio 1.23		P16.21 "gpmc_advn_ale"
-gpmc oen ren		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.24		P16.47 "gpmc_oen_ren"
-gpmc wen		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.25		P16.19 "gpmc_wen"
-gpmc ben0		gpmc cs4		-			vin 0.0b hsync		-			-			vin 1.0b de		timer 1			-			dma event 2		-			-			-			-			gpio 1.26		P16.11 "gpmc_ben0"
-gpmc ben1		gpmc cs5		-			vin 0.0b de		vin 1.0b clk		gpmc a3			vin 1.0b fld		timer 0			-			dma event 3		-			-			-			-			gpio 1.27		P16.17 "gpmc_ben1"
-gpmc wait0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.28		P16.20 "gpmc_wait0"
-vin 0.0a clk		-			-			vout 2 d16		vout 2 fld		-			-			-			-			-			-			-			-			-			gpio 1.30		hdmi ls oe
-vin 0.0b clk		-			-			-			-			-			vin 1.0a clk		-			-			-			-			-			-			-			gpio 1.31		P19.55 "vin1b_clk1"
-vin 0.0a de		vin 0.0b hsync		-			vout 2 d17		vout 2 de		uart 6 rxd		-			timer 15		spi 2 sclk		kbd row 0		qep 0 A			-			-			-			gpio 2.00		-×
-vin 0.0a fld		vin 0.0b vsync		-			-			vout 2 clk		uart 6 txd		-			timer 14		spi 2 d1		kbd row 1		qep 0 B			-			-			-			gpio 2.01		-×
-vin 0.0a hsync		vin 0.0b fld		-			-			vout 2 hsync		uart 6 cts		-			timer 13		spi 2 d0		-			qep 0 index		-			-			-			gpio 2.02		-×
-vin 0.0a vsync		vin 0.0b de		-			-			vout 2 vsync		uart 6 rts		-			timer 12		spi 2 cs0		-			qep 0 strobe		-			-			-			gpio 2.03		-×
-vin 0.0a d0		-			-			vout 2 d7		vout 2 d23		uart 7 rxd		-			-			-			-			pwm 0 A			-			-			-			gpio 2.04		-×
-vin 0.0a d1		-			-			vout 2 d6		vout 2 d22		uart 7 txd		-			-			-			-			pwm 0 B			-			-			-			gpio 2.05		-×
-vin 0.0a d2		-			-			vout 2 d5		vout 2 d21		uart 7 cts		-			-			-			-			pwm 0 trip		-			-			-			gpio 2.06		P19.56 "vin1a_d2"
-vin 0.0a d3		-			-			vout 2 d4		vout 2 d20		uart 7 rts		-			-			-			-			cap 0			-			pr 0 pru0 gpi0		pr 0 pru0 gpo0		gpio 2.07		P19.52 "vin1a_d3"
-vin 0.0a d4		-			-			vout 2 d3		vout 2 d19		-			-			-			-			-			pwm 0 sync in		-			pr 0 pru0 gpi1		pr 0 pru0 gpo1		gpio 2.08		P19.45 "vin1a_d4"
-vin 0.0a d5		-			-			vout 2 d2		vout 2 d18		-			-			-			-			-			pwm 0 sync out		-			pr 0 pru0 gpi2		pr 0 pru0 gpo2		gpio 2.09		P19.48 "vin1a_d5"
-vin 0.0a d6		-			-			vout 2 d1		vout 2 d17		-			-			-			-			-			qep 1 A			-			pr 0 pru0 gpi3		pr 0 pru0 gpo3		gpio 2.10		P19.53 "vin1a_d6"
-vin 0.0a d7		-			-			vout 2 d0		vout 2 d16		-			-			-			-			-			qep 1 B			-			pr 0 pru0 gpi4		pr 0 pru0 gpo4		gpio 2.11		P19.14 "vin1a_d7"
-vin 0.0a d8		vin 0.0b d7		-			-			vout 2 d15		-			-			-			-			kbd row 2		qep 1 index		-			pr 0 pru0 gpi5		pr 0 pru0 gpo5		gpio 2.12		P19.15 "vin1a_d8"
-vin 0.0a d9		vin 0.0b d6		-			-			vout 2 d14		-			-			-			-			kbd row 3		qep 1 strobe		-			pr 0 pru0 gpi6		pr 0 pru0 gpo6		gpio 2.13		-×
-vin 0.0a d10		vin 0.0b d5		-			-			vout 2 d13		-			-			-			-			kbd row 4		pr 0 edc latch 0	-			pr 0 pru0 gpi7		pr 0 pru0 gpo7		gpio 2.14		P19.46 "vin1a_d10"
-vin 0.0a d11		vin 0.0b d4		-			-			vout 2 d12		gpmc a23		-			-			-			kbd row 5		pr 0 edc latch 1	-			pr 0 pru0 gpi8		pr 0 pru0 gpo8		gpio 2.15		P19.49 "vin1a_d11"
-vin 0.0a d12		vin 0.0b d3		-			-			vout 2 d11		gpmc a24		-			-			-			kbd row 6		pr 0 edc sync 0		-			pr 0 pru0 gpi9		pr 0 pru0 gpo9		gpio 2.16		P19.42 "vin1a_d12"
-vin 0.0a d13		vin 0.0b d2		-			-			vout 2 d10		gpmc a25		-			-			-			kbd row 7		pr 0 edc sync 1		-			pr 0 pru0 gpi10		pr 0 pru0 gpo10		gpio 2.17		-×
-vin 0.0a d14		vin 0.0b d1		-			-			vout 2 d9		gpmc a26		-			-			-			kbd row 8		pr 0 edio latch		-			pr 0 pru0 gpi11		pr 0 pru0 gpo11		gpio 2.18		P19.43 "vin1a_d14"
-vin 0.0a d15		vin 0.0b d0		-			-			vout 2 d8		gpmc a27		-			-			-			kbd col 0		pr 0 edio sof		-			pr 0 pru0 gpi12		pr 0 pru0 gpo12		gpio 2.19		-×
-vin 0.0a d16		vin 0.0b d7		-			-			vout 2 d7		-			vin 1.0a d0		-			-			kbd col 1		pr 0 edio in0		pr 0 edio out0		pr 0 pru0 gpi13		pr 0 pru0 gpo13		gpio 2.20		P19.11 "vin1a_d16"
-vin 0.0a d17		vin 0.0b d6		-			-			vout 2 d6		-			vin 1.0a d1		-			-			kbd col 2		pr 0 edio in1		pr 0 edio out1		pr 0 pru0 gpi14		pr 0 pru0 gpo14		gpio 2.21		-×
-vin 0.0a d18		vin 0.0b d5		-			-			vout 2 d5		-			vin 1.0a d2		-			-			kbd col 3		pr 0 edio in2		pr 0 edio out2		pr 0 pru0 gpi15		pr 0 pru0 gpo15		gpio 2.22		-×
-vin 0.0a d19		vin 0.0b d4		-			-			vout 2 d4		-			vin 1.0a d3		-			-			kbd col 4		pr 0 edio in3		pr 0 edio out3		pr 0 pru0 gpi16		pr 0 pru0 gpo16		gpio 2.23		P19.39 "vin1a_d19"
-vin 0.0a d20		vin 0.0b d3		-			-			vout 2 d3		-			vin 1.0a d4		-			-			kbd col 5		pr 0 edio in4		pr 0 edio out4		pr 0 pru0 gpi17		pr 0 pru0 gpo17		gpio 2.24		P19.12 "vin1a_d20"
-vin 0.0a d21		vin 0.0b d2		-			-			vout 2 d2		-			vin 1.0a d5		-			-			kbd col 6		pr 0 edio in5		pr 0 edio out5		pr 0 pru0 gpi18		pr 0 pru0 gpo18		gpio 2.25		-×
-vin 0.0a d22		vin 0.0b d1		-			-			vout 2 d1		-			vin 1.0a d6		-			-			kbd col 7		pr 0 edio in6		pr 0 edio out6		pr 0 pru0 gpi19		pr 0 pru0 gpo19		gpio 2.26		P19.40 "vin1a_d22"
-vin 0.0a d23		vin 0.0b d0		-			-			vout 2 d0		-			vin 1.0a d7		-			-			kbd col 8		pr 0 edio in7		pr 0 edio out7		pr 0 pru0 gpi20		pr 0 pru0 gpo20		gpio 2.27		-×
-vin 0.1a clk		-			-			-			vout 1 fld		emu 5			-			-			-			kbd row 0		qep 0 A			-			pr 0 edio in0		pr 0 edio out0		gpio 2.28		P18.11 "vin2a_clk0"
-vin 0.1a de		vin 0.1a fld		vin 0.1b fld		vin 0.1b de		vout 1 de		emu 6			-			-			-			kbd row 1		qep 0 B			-			pr 0 edio in1		pr 0 edio out1		gpio 2.29		P18.09 "vin2a_de0"
-vin 0.1a fld		-			vin 0.1b clk		-			vout 1 clk		emu 7			-			-			-			-			qep 0 index		-			pr 0 edio in2		pr 0 edio out2		gpio 2.30		P18.36 "vin2a_fld0"
-vin 0.1a hsync		-			-			vin 0.1b hsync		vout 1 hsync		emu 8			-			uart 8 rxd		spi 3 sclk		kbd row 2		qep 0 strobe		pr 0 uart cts		pr 0 edio in3		pr 0 edio out3		gpio 2.31		P18.40 "vin2a_hsync0"
-vin 0.1a vsync		-			-			vin 0.1b vsync		vout 1 vsync		emu 9			-			uart 8 txd		spi 3 d1		kbd row 3		pwm 0 A			pr 0 uart rts		pr 0 edio in4		pr 0 edio out4		gpio 3.00		P18.37 "vin2a_vsync0"
-vin 0.1a d0		-			-			-			vout 1 d23		emu 10			-			uart 8 cts		spi 3 d0		kbd row 4		pwm 0 B			pr 0 uart rxd		pr 0 edio in5		pr 0 edio out5		gpio 3.01		P18.41 "vin2a_d0"
-vin 0.1a d1		-			-			-			vout 1 d22		emu 11			-			uart 8 rts		spi 3 cs0		kbd row 5		pwm 0 trip		pr 0 uart txd		pr 0 edio in6		pr 0 edio out6		gpio 3.02		P18.10 "vin2a_d1"
-vin 0.1a d2		-			-			-			vout 1 d21		emu 12			-			-			uart 9 rxd		kbd row 6		cap 0			pr 0 cap		pr 0 edio in7		pr 0 edio out7		gpio 3.03		P18.12 "vin2a_d2"
-vin 0.1a d3		-			-			-			vout 1 d20		emu 13			-			-			uart 9 txd		kbd col 0		pwm 0 sync in		pr 0 edc latch 0	pr 0 pru1 gpi0		pr 0 pru1 gpo0		gpio 3.04		P18.42 "vin2a_d3"
-vin 0.1a d4		-			-			-			vout 1 d19		emu 14			-			-			uart 9 cts		kbd col 1		pwm 0 sync out		pr 0 edc sync 0		pr 0 pru1 gpi1		pr 0 pru1 gpo1		gpio 3.05		P18.13 "vin2a_d4"
-vin 0.1a d5		-			-			-			vout 1 d18		emu 15			-			-			uart 9 rts		kbd col 2		qep 1 A			pr 0 edio sof		pr 0 pru1 gpi2		pr 0 pru1 gpo2		gpio 3.06		P18.08 "vin2a_d5"
-vin 0.1a d6		-			-			-			vout 1 d17		emu 16			-			-			mii 1 rxd1		kbd col 3		qep 1 B			pr 0 mii 1 txclk	pr 0 pru1 gpi3		pr 0 pru1 gpo3		gpio 3.07		P18.43 "vin2a_d6"
-vin 0.1a d7		-			-			-			vout 1 d16		emu 17			-			-			mii 1 rxd2		kbd col 4		qep 1 index		pr 0 mii 1 txen		pr 0 pru1 gpi4		pr 0 pru1 gpo4		gpio 3.08		P18.39 "vin2a_d7"
-vin 0.1a d8		-			-			-			vout 1 d15		emu 18			-			-			mii 1 rxd3		kbd col 5		qep 1 strobe		pr 0 mii 1 txd3		pr 0 pru1 gpi5		pr 0 pru1 gpo5		gpio 3.09		P18.38 "vin2a_d8"
-vin 0.1a d9		-			-			-			vout 1 d14		emu 19			-			-			mii 1 rxd0		kbd col 6		pwm 1 A			pr 0 mii 1 txd2		pr 0 pru1 gpi6		pr 0 pru1 gpo6		gpio 3.10		P18.07 "vin2a_d9"
-vin 0.1a d10		-			-			mdio clk		vout 1 d13		-			-			-			-			kbd col 7		pwm 1 B			pr 0 mdio mdclk		pr 0 pru1 gpi7		pr 0 pru1 gpo7		gpio 3.11		P18.44 "vin2a_d10"
-vin 0.1a d11		-			-			mdio data		vout 1 d12		-			-			-			-			kbd row 7		pwm 1 trip		pr 0 mdio data		pr 0 pru1 gpi8		pr 0 pru1 gpo8		gpio 3.12		P18.06 "vin2a_d11"
-vin 0.1a d12		-			-			rgmii 1 txc		vout 1 d11		-			-			-			mii 1 rxclk		kbd col 8		cap 1			pr 0 mii 1 txd1		pr 0 pru1 gpi9		pr 0 pru1 gpo9		gpio 3.13		eth 1 tx clk
-vin 0.1a d13		-			-			rgmii 1 txctl		vout 1 d10		-			-			-			mii 1 rxdv		kbd row 8		qep 2 A			pr 0 mii 1 txd0		pr 0 pru1 gpi10		pr 0 pru1 gpo10		gpio 3.14		eth 1 tx ctl
-vin 0.1a d14		-			-			rgmii 1 txd3		vout 1 d9		-			-			-			mii 1 txclk		-			qep 2 B			pr 0 mii 1 rxclk	pr 0 pru1 gpi11		pr 0 pru1 gpo11		gpio 3.15		eth 1 tx d3
-vin 0.1a d15		-			-			rgmii 1 txd2		vout 1 d8		-			-			-			mii 1 txd0		-			qep 2 index		pr 0 mii 1 rxdv		pr 0 pru1 gpi12		pr 0 pru1 gpo12		gpio 3.16		eth 1 tx d2
-vin 0.1a d16		-			vin 0.1b d7		rgmii 1 txd1		vout 1 d7		-			vin 1.0a d8		-			mii 1 txd1		-			qep 2 strobe		pr 0 mii 1 rxd3		pr 0 pru1 gpi13		pr 0 pru1 gpo13		gpio 3.24		eth 1 tx d1
-vin 0.1a d17		-			vin 0.1b d6		rgmii 1 txd0		vout 1 d6		-			vin 1.0a d9		-			mii 1 txd2		-			pwm 2 A			pr 0 mii 1 rxd2		pr 0 pru1 gpi14		pr 0 pru1 gpo14		gpio 3.25		eth 1 tx d0
-vin 0.1a d18		-			vin 0.1b d5		rgmii 1 rxc		vout 1 d5		-			vin 1.0a d10		-			mii 1 txd3		-			pwm 2 B			pr 0 mii 1 rxd1		pr 0 pru1 gpi15		pr 0 pru1 gpo15		gpio 3.26		eth 1 rx clk
-vin 0.1a d19		-			vin 0.1b d4		rgmii 1 rxctl		vout 1 d4		-			vin 1.0a d11		-			mii 1 txer		-			pwm 2 trip		pr 0 mii 1 rxd0		pr 0 pru1 gpi16		pr 0 pru1 gpo16		gpio 3.27		eth 1 rx ctl
-vin 0.1a d20		-			vin 0.1b d3		rgmii 1 rxd3		vout 1 d3		vin 1.0a de		vin 1.0a d12		-			mii 1 rxer		-			cap 2			pr 0 mii 1 rxer		pr 0 pru1 gpi17		pr 0 pru1 gpo17		gpio 3.28		eth 1 rx d3
-vin 0.1a d21		-			vin 0.1b d2		rgmii 1 rxd2		vout 1 d2		vin 1.0a fld		vin 1.0a d13		-			mii 1 col		-			-			pr 0 mii 1 rxlink	pr 0 pru1 gpi18		pr 0 pru1 gpo18		gpio 3.29		eth 1 rx d2
-vin 0.1a d22		-			vin 0.1b d1		rgmii 1 rxd1		vout 1 d1		vin 1.0a hsync		vin 1.0a d14		-			mii 1 crs		-			-			pr 0 mii 1 col		pr 0 pru1 gpi19		pr 0 pru1 gpo19		gpio 3.30		eth 1 rx d1
-vin 0.1a d23		-			vin 0.1b d0		rgmii 1 rxd0		vout 1 d0		vin 1.0a vsync		vin 1.0a d15		-			mii 1 txen		-			-			pr 0 mii 1 crs		pr 0 pru1 gpi20		pr 0 pru1 gpo20		gpio 3.31		eth 1 rx d0
-vout 0 clk		-			-			vin 1.1a fld		vin 1.0a fld		-			-			-			spi 2 cs0		-			-			-			-			-			gpio 3.19		P18.57 "vout1_clk"
-vout 0 de		-			-			vin 1.1a de		vin 1.0a de		-			-			-			spi 2 d1		-			-			-			-			-			gpio 3.20		P18.53 "vout1_de"
-vout 0 fld		-			-			vin 1.1a clk		vin 1.0a clk		-			-			-			spi 2 cs1		-			-			-			-			-			gpio 3.21		usb 2 vbus det
-vout 0 hsync		-			-			vin 1.1a hsync		vin 1.0a hsync		-			-			-			spi 2 d0		-			-			-			-			-			gpio 3.22		P18.27 "vout1_hsync"
-vout 0 vsync		-			-			vin 1.1a vsync		vin 1.0a vsync		-			-			-			spi 2 sclk		-			-			-			pr 1 pru1 gpi17		pr 1 pru1 gpo17		gpio 3.23		P18.28 "vout1_vsync"
-vout 0 d0		-			uart 4 rxd		vin 1.1a d16		vin 1.0a d16		-			-			-			spi 2 cs2		-			pr 0 uart cts		-			pr 1 pru1 gpi18		pr 1 pru1 gpo18		gpio 7.00		P18.25 "vout1_d0"
-vout 0 d1		-			uart 4 txd		vin 1.1a d17		vin 1.0a d17		-			-			-			-			-			pr 0 uart rts		-			pr 1 pru1 gpi19		pr 1 pru1 gpo19		gpio 7.01		P18.55 "vout1_d1"
-vout 0 d2		-			emu 2			vin 1.1a d18		vin 1.0a d18		obs 0			obs 16			obs irq 0		-			-			pr 0 uart rxd		-			pr 1 pru1 gpi20		pr 1 pru1 gpo20		gpio 7.02		P18.54 "vout1_d2"
-vout 0 d3		-			emu 5			vin 1.1a d19		vin 1.0a d19		obs 1			obs 17			obs dmarq 0		-			-			pr 0 uart txd		-			pr 1 pru0 gpi0		pr 1 pru0 gpo0		gpio 7.03		P18.26 "vout1_d3"
-vout 0 d4		-			emu 6			vin 1.1a d20		vin 1.0a d20		obs 2			obs 18			-			-			-			pr 0 cap		-			pr 1 pru0 gpi1		pr 1 pru0 gpo1		gpio 7.04		P18.48 "vout1_d4"
-vout 0 d5		-			emu 7			vin 1.1a d21		vin 1.0a d21		obs 3			obs 19			-			-			-			pr 1 edc latch 0	-			pr 1 pru0 gpi2		pr 1 pru0 gpo2		gpio 7.05		P18.49 "vout1_d5"
-vout 0 d6		-			emu 8			vin 1.1a d22		vin 1.0a d22		obs 4			obs 20			-			-			-			pr 1 edc latch 1	-			pr 1 pru0 gpi3		pr 1 pru0 gpo3		gpio 7.06		P18.45 "vout1_d6"
-vout 0 d7		-			emu 9			vin 1.1a d23		vin 1.0a d23		-			-			-			-			-			pr 1 edc sync 0		-			pr 1 pru0 gpi4		pr 1 pru0 gpo4		gpio 7.07		P18.46 "vout1_d7"
-vout 0 d8		-			uart 5 rxd		vin 1.1a d8		vin 1.0a d8		-			-			-			-			-			pr 1 edc sync 1		-			pr 1 pru0 gpi5		pr 1 pru0 gpo5		gpio 7.08		P18.47 "vout1_d8"
-vout 0 d9		-			uart 5 txd		vin 1.1a d9		vin 1.0a d9		-			-			-			-			-			pr 1 edio latch		-			pr 1 pru0 gpi6		pr 1 pru0 gpo6		gpio 7.09		P18.56 "vout1_d9"
-vout 0 d10		-			emu 3			vin 1.1a d10		vin 1.0a d10		obs 5			obs 21			obs irq 1		-			-			pr 1 edio sof		-			pr 1 pru0 gpi7		pr 1 pru0 gpo7		gpio 7.10		P18.16 "vout1_d10"
-vout 0 d11		-			emu 10			vin 1.1a d11		vin 1.0a d11		obs 6			obs 22			obs dmarq 1		-			-			pr 1 uart cts		-			pr 1 pru0 gpi8		pr 1 pru0 gpo8		gpio 7.11		P18.18 "vout1_d11"
-vout 0 d12		-			emu 11			vin 1.1a d12		vin 1.0a d12		obs 7			obs 23			-			-			-			pr 1 uart rts		-			pr 1 pru0 gpi9		pr 1 pru0 gpo9		gpio 7.12		P18.20 "vout1_d12"
-vout 0 d13		-			emu 12			vin 1.1a d13		vin 1.0a d13		obs 8			obs 24			-			-			-			pr 1 uart rxd		-			pr 1 pru0 gpi10		pr 1 pru0 gpo10		gpio 7.13		P18.15 "vout1_d13"
-vout 0 d14		-			emu 13			vin 1.1a d14		vin 1.0a d14		obs 9			obs 25			-			-			-			pr 1 uart txd		-			pr 1 pru0 gpi11		pr 1 pru0 gpo11		gpio 7.14		P18.17 "vout1_d14"
-vout 0 d15		-			emu 14			vin 1.1a d15		vin 1.0a d15		obs 10			obs 26			-			-			-			pr 1 cap		-			pr 1 pru0 gpi12		pr 1 pru0 gpo12		gpio 7.15		P18.14 "vout1_d15"
-vout 0 d16		-			uart 6 rxd		vin 1.1a d0		vin 1.0a d0		-			-			-			-			-			pr 1 edio in0		pr 1 edio out0		pr 1 pru0 gpi13		pr 1 pru0 gpo13		gpio 7.16		P18.50 "vout1_d16"
-vout 0 d17		-			uart 6 txd		vin 1.1a d1		vin 1.0a d1		-			-			-			-			-			pr 1 edio in1		pr 1 edio out1		pr 1 pru0 gpi14		pr 1 pru0 gpo14		gpio 7.17		P18.51 "vout1_d17"
-vout 0 d18		-			emu 4			vin 1.1a d2		vin 1.0a d2		obs 11			obs 27			-			-			-			pr 1 edio in2		pr 1 edio out2		pr 1 pru0 gpi15		pr 1 pru0 gpo15		gpio 7.18		P18.21 "vout1_d18"
-vout 0 d19		-			emu 15			vin 1.1a d3		vin 1.0a d3		obs 12			obs 28			-			-			-			pr 1 edio in3		pr 1 edio out3		pr 1 pru0 gpi16		pr 1 pru0 gpo16		gpio 7.19		P18.22 "vout1_d19"
-vout 0 d20		-			emu 16			vin 1.1a d4		vin 1.0a d4		obs 13			obs 29			-			-			-			pr 1 edio in4		pr 1 edio out4		pr 1 pru0 gpi17		pr 1 pru0 gpo17		gpio 7.20		P18.19 "vout1_d20"
-vout 0 d21		-			emu 17			vin 1.1a d5		vin 1.0a d5		obs 14			obs 30			-			-			-			pr 1 edio in5		pr 1 edio out5		pr 1 pru0 gpi18		pr 1 pru0 gpo18		gpio 7.21		P18.23 "vout1_d21"
-vout 0 d22		-			emu 18			vin 1.1a d6		vin 1.0a d6		obs 15			obs 31			-			-			-			pr 1 edio in6		pr 1 edio out6		pr 1 pru0 gpi19		pr 1 pru0 gpo19		gpio 7.22		P18.52 "vout1_d22"
-vout 0 d23		-			emu 19			vin 1.1a d7		vin 1.0a d7		-			-			-			spi 2 cs3		-			pr 1 edio in7		pr 1 edio out7		pr 1 pru0 gpi20		pr 1 pru0 gpo20		gpio 7.23		P18.24 "vout1_d23"
+gpmc cs0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.19		-
+gpmc cs2		qspi cs0		-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.20		-
+gpmc cs3		qspi cs1		vin 1.0a clk		vout 2 clk		-			gpmc a1			-			-			-			-			-			-			-			-			gpio 1.21		-
+gpmc clk		gpmc cs7		clkout 0		gpmc wait1		vin 1.1a hsync		vin 1.1a de		vin 1.0b clk		timer 3			i²c 2 scl		dma event 0		-			-			-			-			gpio 1.22		-
+gpmc advn ale		gpmc cs6		clkout 1		gpmc wait1		vin 1.1a vsync		gpmc a2			gpmc a23		timer 2			i²c 2 sda		dma event 1		-			-			-			-			gpio 1.23		-
+gpmc oen ren		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.24		-
+gpmc wen		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.25		-
+gpmc ben0		gpmc cs4		-			vin 0.0b hsync		-			-			vin 1.0b de		timer 1			-			dma event 2		-			-			-			-			gpio 1.26		-
+gpmc ben1		gpmc cs5		-			vin 0.0b de		vin 1.0b clk		gpmc a3			vin 1.0b fld		timer 0			-			dma event 3		-			-			-			-			gpio 1.27		-
+gpmc wait0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 1.28		-
+vin 0.0a clk		-			-			vout 2 d16		vout 2 fld		-			-			-			-			-			-			-			-			-			gpio 1.30		adc irq
+vin 0.0b clk		-			-			-			-			-			vin 1.0a clk		-			-			-			-			-			-			-			gpio 1.31		-
+vin 0.0a de		vin 0.0b hsync		-			vout 2 d17		vout 2 de		uart 6 rxd		-			timer 15		spi 2 sclk		kbd row 0		qep 0 A			-			-			-			gpio 2.00		P8.35b
+vin 0.0a fld		vin 0.0b vsync		-			-			vout 2 clk		uart 6 txd		-			timer 14		spi 2 d1		kbd row 1		qep 0 B			-			-			-			gpio 2.01		P8.33b
+vin 0.0a hsync		vin 0.0b fld		-			-			vout 2 hsync		uart 6 cts		-			timer 13		spi 2 d0		-			qep 0 index		-			-			-			gpio 2.02		-
+vin 0.0a vsync		vin 0.0b de		-			-			vout 2 vsync		uart 6 rts		-			timer 12		spi 2 cs0		-			qep 0 strobe		-			-			-			gpio 2.03		P9.21a
+vin 0.0a d0		-			-			vout 2 d7		vout 2 d23		uart 7 rxd		-			-			-			-			pwm 0 A			-			-			-			gpio 2.04		-
+vin 0.0a d1		-			-			vout 2 d6		vout 2 d22		uart 7 txd		-			-			-			-			pwm 0 B			-			-			-			gpio 2.05		-
+vin 0.0a d2		-			-			vout 2 d5		vout 2 d21		uart 7 cts		-			-			-			-			pwm 0 trip		-			-			-			gpio 2.06		-
+vin 0.0a d3		-			-			vout 2 d4		vout 2 d20		uart 7 rts		-			-			-			-			cap 0			-			pr 0 pru0 gpi0		pr 0 pru0 gpo0		gpio 2.07		user led 4
+vin 0.0a d4		-			-			vout 2 d3		vout 2 d19		-			-			-			-			-			pwm 0 sync in		-			pr 0 pru0 gpi1		pr 0 pru0 gpo1		gpio 2.08		-
+vin 0.0a d5		-			-			vout 2 d2		vout 2 d18		-			-			-			-			-			pwm 0 sync out		-			pr 0 pru0 gpi2		pr 0 pru0 gpo2		gpio 2.09		-
+vin 0.0a d6		-			-			vout 2 d1		vout 2 d17		-			-			-			-			-			qep 1 A			-			pr 0 pru0 gpi3		pr 0 pru0 gpo3		gpio 2.10		P8.12
+vin 0.0a d7		-			-			vout 2 d0		vout 2 d16		-			-			-			-			-			qep 1 B			-			pr 0 pru0 gpi4		pr 0 pru0 gpo4		gpio 2.11		P8.11
+vin 0.0a d8		vin 0.0b d7		-			-			vout 2 d15		-			-			-			-			kbd row 2		qep 1 index		-			pr 0 pru0 gpi5		pr 0 pru0 gpo5		gpio 2.12		P9.15
+vin 0.0a d9		vin 0.0b d6		-			-			vout 2 d14		-			-			-			-			kbd row 3		qep 1 strobe		-			pr 0 pru0 gpi6		pr 0 pru0 gpo6		gpio 2.13		usb C id
+vin 0.0a d10		vin 0.0b d5		-			-			vout 2 d13		-			-			-			-			kbd row 4		pr 0 edc latch 0	-			pr 0 pru0 gpi7		pr 0 pru0 gpo7		gpio 2.14		user led 3
+vin 0.0a d11		vin 0.0b d4		-			-			vout 2 d12		gpmc a23		-			-			-			kbd row 5		pr 0 edc latch 1	-			pr 0 pru0 gpi8		pr 0 pru0 gpo8		gpio 2.15		user led 2
+vin 0.0a d12		vin 0.0b d3		-			-			vout 2 d11		gpmc a24		-			-			-			kbd row 6		pr 0 edc sync 0		-			pr 0 pru0 gpi9		pr 0 pru0 gpo9		gpio 2.16		-
+vin 0.0a d13		vin 0.0b d2		-			-			vout 2 d10		gpmc a25		-			-			-			kbd row 7		pr 0 edc sync 1		-			pr 0 pru0 gpi10		pr 0 pru0 gpo10		gpio 2.17		user led 0
+vin 0.0a d14		vin 0.0b d1		-			-			vout 2 d9		gpmc a26		-			-			-			kbd row 8		pr 0 edio latch		-			pr 0 pru0 gpi11		pr 0 pru0 gpo11		gpio 2.18		wifi reg on
+vin 0.0a d15		vin 0.0b d0		-			-			vout 2 d8		gpmc a27		-			-			-			kbd col 0		pr 0 edio sof		-			pr 0 pru0 gpi12		pr 0 pru0 gpo12		gpio 2.19		-
+vin 0.0a d16		vin 0.0b d7		-			-			vout 2 d7		-			vin 1.0a d0		-			-			kbd col 1		pr 0 edio in0		pr 0 edio out0		pr 0 pru0 gpi13		pr 0 pru0 gpo13		gpio 2.20		bluetooth host wake
+vin 0.0a d17		vin 0.0b d6		-			-			vout 2 d6		-			vin 1.0a d1		-			-			kbd col 2		pr 0 edio in1		pr 0 edio out1		pr 0 pru0 gpi14		pr 0 pru0 gpo14		gpio 2.21		bluetooth wake
+vin 0.0a d18		vin 0.0b d5		-			-			vout 2 d5		-			vin 1.0a d2		-			-			kbd col 3		pr 0 edio in2		pr 0 edio out2		pr 0 pru0 gpi15		pr 0 pru0 gpo15		gpio 2.22		bluetooth reg on
+vin 0.0a d19		vin 0.0b d4		-			-			vout 2 d4		-			vin 1.0a d3		-			-			kbd col 4		pr 0 edio in3		pr 0 edio out3		pr 0 pru0 gpi16		pr 0 pru0 gpo16		gpio 2.23		wifi host wake
+vin 0.0a d20		vin 0.0b d3		-			-			vout 2 d3		-			vin 1.0a d4		-			-			kbd col 5		pr 0 edio in4		pr 0 edio out4		pr 0 pru0 gpi17		pr 0 pru0 gpo17		gpio 2.24		P9.26b
+vin 0.0a d21		vin 0.0b d2		-			-			vout 2 d2		-			vin 1.0a d5		-			-			kbd col 6		pr 0 edio in5		pr 0 edio out5		pr 0 pru0 gpi18		pr 0 pru0 gpo18		gpio 2.25		usb C irq
+vin 0.0a d22		vin 0.0b d1		-			-			vout 2 d1		-			vin 1.0a d6		-			-			kbd col 7		pr 0 edio in6		pr 0 edio out6		pr 0 pru0 gpi19		pr 0 pru0 gpo19		gpio 2.26		-
+vin 0.0a d23		vin 0.0b d0		-			-			vout 2 d0		-			vin 1.0a d7		-			-			kbd col 8		pr 0 edio in7		pr 0 edio out7		pr 0 pru0 gpi20		pr 0 pru0 gpo20		gpio 2.27		adc voltage select
+vin 0.1a clk		-			-			-			vout 1 fld		emu 5			-			-			-			kbd row 0		qep 0 A			-			pr 0 edio in0		pr 0 edio out0		gpio 2.28		-
+vin 0.1a de		vin 0.1a fld		vin 0.1b fld		vin 0.1b de		vout 1 de		emu 6			-			-			-			kbd row 1		qep 0 B			-			pr 0 edio in1		pr 0 edio out1		gpio 2.29		-
+vin 0.1a fld		-			vin 0.1b clk		-			vout 1 clk		emu 7			-			-			-			-			qep 0 index		-			pr 0 edio in2		pr 0 edio out2		gpio 2.30		-
+vin 0.1a hsync		-			-			vin 0.1b hsync		vout 1 hsync		emu 8			-			uart 8 rxd		spi 3 sclk		kbd row 2		qep 0 strobe		pr 0 uart cts		pr 0 edio in3		pr 0 edio out3		gpio 2.31		-
+vin 0.1a vsync		-			-			vin 0.1b vsync		vout 1 vsync		emu 9			-			uart 8 txd		spi 3 d1		kbd row 3		pwm 0 A			pr 0 uart rts		pr 0 edio in4		pr 0 edio out4		gpio 3.00		P8.34b
+vin 0.1a d0		-			-			-			vout 1 d23		emu 10			-			uart 8 cts		spi 3 d0		kbd row 4		pwm 0 B			pr 0 uart rxd		pr 0 edio in5		pr 0 edio out5		gpio 3.01		P8.36b
+vin 0.1a d1		-			-			-			vout 1 d22		emu 11			-			uart 8 rts		spi 3 cs0		kbd row 5		pwm 0 trip		pr 0 uart txd		pr 0 edio in6		pr 0 edio out6		gpio 3.02		-
+vin 0.1a d2		-			-			-			vout 1 d21		emu 12			-			-			uart 9 rxd		kbd row 6		cap 0			pr 0 cap		pr 0 edio in7		pr 0 edio out7		gpio 3.03		P8.15a
+vin 0.1a d3		-			-			-			vout 1 d20		emu 13			-			-			uart 9 txd		kbd col 0		pwm 0 sync in		pr 0 edc latch 0	pr 0 pru1 gpi0		pr 0 pru1 gpo0		gpio 3.04		-
+vin 0.1a d4		-			-			-			vout 1 d19		emu 14			-			-			uart 9 cts		kbd col 1		pwm 0 sync out		pr 0 edc sync 0		pr 0 pru1 gpi1		pr 0 pru1 gpo1		gpio 3.05		P9.20b
+vin 0.1a d5		-			-			-			vout 1 d18		emu 15			-			-			uart 9 rts		kbd col 2		qep 1 A			pr 0 edio sof		pr 0 pru1 gpi2		pr 0 pru1 gpo2		gpio 3.06		P9.19b
+vin 0.1a d6		-			-			-			vout 1 d17		emu 16			-			-			mii 1 rxd1		kbd col 3		qep 1 B			pr 0 mii 1 txclk	pr 0 pru1 gpi3		pr 0 pru1 gpo3		gpio 3.07		P9.41b
+vin 0.1a d7		-			-			-			vout 1 d16		emu 17			-			-			mii 1 rxd2		kbd col 4		qep 1 index		pr 0 mii 1 txen		pr 0 pru1 gpi4		pr 0 pru1 gpo4		gpio 3.08		-
+vin 0.1a d8		-			-			-			vout 1 d15		emu 18			-			-			mii 1 rxd3		kbd col 5		qep 1 strobe		pr 0 mii 1 txd3		pr 0 pru1 gpi5		pr 0 pru1 gpo5		gpio 3.09		P8.18
+vin 0.1a d9		-			-			-			vout 1 d14		emu 19			-			-			mii 1 rxd0		kbd col 6		pwm 1 A			pr 0 mii 1 txd2		pr 0 pru1 gpi6		pr 0 pru1 gpo6		gpio 3.10		P8.19
+vin 0.1a d10		-			-			mdio clk		vout 1 d13		-			-			-			-			kbd col 7		pwm 1 B			pr 0 mdio mdclk		pr 0 pru1 gpi7		pr 0 pru1 gpo7		gpio 3.11		P8.13
+vin 0.1a d11		-			-			mdio data		vout 1 d12		-			-			-			-			kbd row 7		pwm 1 trip		pr 0 mdio data		pr 0 pru1 gpi8		pr 0 pru1 gpo8		gpio 3.12		-
+vin 0.1a d12		-			-			rgmii 1 txc		vout 1 d11		-			-			-			mii 1 rxclk		kbd col 8		cap 1			pr 0 mii 1 txd1		pr 0 pru1 gpi9		pr 0 pru1 gpo9		gpio 3.13		P8.14
+vin 0.1a d13		-			-			rgmii 1 txctl		vout 1 d10		-			-			-			mii 1 rxdv		kbd row 8		qep 2 A			pr 0 mii 1 txd0		pr 0 pru1 gpi10		pr 0 pru1 gpo10		gpio 3.14		P9.42b
+vin 0.1a d14		-			-			rgmii 1 txd3		vout 1 d9		-			-			-			mii 1 txclk		-			qep 2 B			pr 0 mii 1 rxclk	pr 0 pru1 gpi11		pr 0 pru1 gpo11		gpio 3.15		P9.27a
+vin 0.1a d15		-			-			rgmii 1 txd2		vout 1 d8		-			-			-			mii 1 txd0		-			qep 2 index		pr 0 mii 1 rxdv		pr 0 pru1 gpi12		pr 0 pru1 gpo12		gpio 3.16		-
+vin 0.1a d16		-			vin 0.1b d7		rgmii 1 txd1		vout 1 d7		-			vin 1.0a d8		-			mii 1 txd1		-			qep 2 strobe		pr 0 mii 1 rxd3		pr 0 pru1 gpi13		pr 0 pru1 gpo13		gpio 3.24		-
+vin 0.1a d17		-			vin 0.1b d6		rgmii 1 txd0		vout 1 d6		-			vin 1.0a d9		-			mii 1 txd2		-			pwm 2 A			pr 0 mii 1 rxd2		pr 0 pru1 gpi14		pr 0 pru1 gpo14		gpio 3.25		P9.14
+vin 0.1a d18		-			vin 0.1b d5		rgmii 1 rxc		vout 1 d5		-			vin 1.0a d10		-			mii 1 txd3		-			pwm 2 B			pr 0 mii 1 rxd1		pr 0 pru1 gpi15		pr 0 pru1 gpo15		gpio 3.26		P9.16
+vin 0.1a d19		-			vin 0.1b d4		rgmii 1 rxctl		vout 1 d4		-			vin 1.0a d11		-			mii 1 txer		-			pwm 2 trip		pr 0 mii 1 rxd0		pr 0 pru1 gpi16		pr 0 pru1 gpo16		gpio 3.27		P8.15b
+vin 0.1a d20		-			vin 0.1b d3		rgmii 1 rxd3		vout 1 d3		vin 1.0a de		vin 1.0a d12		-			mii 1 rxer		-			cap 2			pr 0 mii 1 rxer		pr 0 pru1 gpi17		pr 0 pru1 gpo17		gpio 3.28		P8.26
+vin 0.1a d21		-			vin 0.1b d2		rgmii 1 rxd2		vout 1 d2		vin 1.0a fld		vin 1.0a d13		-			mii 1 col		-			-			pr 0 mii 1 rxlink	pr 0 pru1 gpi18		pr 0 pru1 gpo18		gpio 3.29		P8.16
+vin 0.1a d22		-			vin 0.1b d1		rgmii 1 rxd1		vout 1 d1		vin 1.0a hsync		vin 1.0a d14		-			mii 1 crs		-			-			pr 0 mii 1 col		pr 0 pru1 gpi19		pr 0 pru1 gpo19		gpio 3.30		-
+vin 0.1a d23		-			vin 0.1b d0		rgmii 1 rxd0		vout 1 d0		vin 1.0a vsync		vin 1.0a d15		-			mii 1 txen		-			-			pr 0 mii 1 crs		pr 0 pru1 gpi20		pr 0 pru1 gpo20		gpio 3.31		-
+vout 0 clk		-			-			vin 1.1a fld		vin 1.0a fld		-			-			-			spi 2 cs0		-			-			-			-			-			gpio 3.19		P8.28a
+vout 0 de		-			-			vin 1.1a de		vin 1.0a de		-			-			-			spi 2 d1		-			-			-			-			-			gpio 3.20		P8.30a
+vout 0 fld		-			-			vin 1.1a clk		vin 1.0a clk		-			-			-			spi 2 cs1		-			-			-			-			-			gpio 3.21		-
+vout 0 hsync		-			-			vin 1.1a hsync		vin 1.0a hsync		-			-			-			spi 2 d0		-			-			-			-			-			gpio 3.22		P8.29a
+vout 0 vsync		-			-			vin 1.1a vsync		vin 1.0a vsync		-			-			-			spi 2 sclk		-			-			-			pr 1 pru1 gpi17		pr 1 pru1 gpo17		gpio 3.23		P8.27a
+vout 0 d0		-			uart 4 rxd		vin 1.1a d16		vin 1.0a d16		-			-			-			spi 2 cs2		-			pr 0 uart cts		-			pr 1 pru1 gpi18		pr 1 pru1 gpo18		gpio 7.00		P8.45a
+vout 0 d1		-			uart 4 txd		vin 1.1a d17		vin 1.0a d17		-			-			-			-			-			pr 0 uart rts		-			pr 1 pru1 gpi19		pr 1 pru1 gpo19		gpio 7.01		P8.46a
+vout 0 d2		-			emu 2			vin 1.1a d18		vin 1.0a d18		obs 0			obs 16			obs irq 0		-			-			pr 0 uart rxd		-			pr 1 pru1 gpi20		pr 1 pru1 gpo20		gpio 7.02		P8.43
+vout 0 d3		-			emu 5			vin 1.1a d19		vin 1.0a d19		obs 1			obs 17			obs dmarq 0		-			-			pr 0 uart txd		-			pr 1 pru0 gpi0		pr 1 pru0 gpo0		gpio 7.03		P8.44
+vout 0 d4		-			emu 6			vin 1.1a d20		vin 1.0a d20		obs 2			obs 18			-			-			-			pr 0 cap		-			pr 1 pru0 gpi1		pr 1 pru0 gpo1		gpio 7.04		P8.41
+vout 0 d5		-			emu 7			vin 1.1a d21		vin 1.0a d21		obs 3			obs 19			-			-			-			pr 1 edc latch 0	-			pr 1 pru0 gpi2		pr 1 pru0 gpo2		gpio 7.05		P8.42
+vout 0 d6		-			emu 8			vin 1.1a d22		vin 1.0a d22		obs 4			obs 20			-			-			-			pr 1 edc latch 1	-			pr 1 pru0 gpi3		pr 1 pru0 gpo3		gpio 7.06		P8.39
+vout 0 d7		-			emu 9			vin 1.1a d23		vin 1.0a d23		-			-			-			-			-			pr 1 edc sync 0		-			pr 1 pru0 gpi4		pr 1 pru0 gpo4		gpio 7.07		P8.40
+vout 0 d8		-			uart 5 rxd		vin 1.1a d8		vin 1.0a d8		-			-			-			-			-			pr 1 edc sync 1		-			pr 1 pru0 gpi5		pr 1 pru0 gpo5		gpio 7.08		P8.37a
+vout 0 d9		-			uart 5 txd		vin 1.1a d9		vin 1.0a d9		-			-			-			-			-			pr 1 edio latch		-			pr 1 pru0 gpi6		pr 1 pru0 gpo6		gpio 7.09		P8.38a
+vout 0 d10		-			emu 3			vin 1.1a d10		vin 1.0a d10		obs 5			obs 21			obs irq 1		-			-			pr 1 edio sof		-			pr 1 pru0 gpi7		pr 1 pru0 gpo7		gpio 7.10		P8.36a
+vout 0 d11		-			emu 10			vin 1.1a d11		vin 1.0a d11		obs 6			obs 22			obs dmarq 1		-			-			pr 1 uart cts		-			pr 1 pru0 gpi8		pr 1 pru0 gpo8		gpio 7.11		P8.34a
+vout 0 d12		-			emu 11			vin 1.1a d12		vin 1.0a d12		obs 7			obs 23			-			-			-			pr 1 uart rts		-			pr 1 pru0 gpi9		pr 1 pru0 gpo9		gpio 7.12		P8.35a
+vout 0 d13		-			emu 12			vin 1.1a d13		vin 1.0a d13		obs 8			obs 24			-			-			-			pr 1 uart rxd		-			pr 1 pru0 gpi10		pr 1 pru0 gpo10		gpio 7.13		P8.33a
+vout 0 d14		-			emu 13			vin 1.1a d14		vin 1.0a d14		obs 9			obs 25			-			-			-			pr 1 uart txd		-			pr 1 pru0 gpi11		pr 1 pru0 gpo11		gpio 7.14		P8.31a
+vout 0 d15		-			emu 14			vin 1.1a d15		vin 1.0a d15		obs 10			obs 26			-			-			-			pr 1 cap		-			pr 1 pru0 gpi12		pr 1 pru0 gpo12		gpio 7.15		P8.32a
+vout 0 d16		-			uart 6 rxd		vin 1.1a d0		vin 1.0a d0		-			-			-			-			-			pr 1 edio in0		pr 1 edio out0		pr 1 pru0 gpi13		pr 1 pru0 gpo13		gpio 7.16		P8.45b
+vout 0 d17		-			uart 6 txd		vin 1.1a d1		vin 1.0a d1		-			-			-			-			-			pr 1 edio in1		pr 1 edio out1		pr 1 pru0 gpi14		pr 1 pru0 gpo14		gpio 7.17		P9.11b
+vout 0 d18		-			emu 4			vin 1.1a d2		vin 1.0a d2		obs 11			obs 27			-			-			-			pr 1 edio in2		pr 1 edio out2		pr 1 pru0 gpi15		pr 1 pru0 gpo15		gpio 7.18		P8.17
+vout 0 d19		-			emu 15			vin 1.1a d3		vin 1.0a d3		obs 12			obs 28			-			-			-			pr 1 edio in3		pr 1 edio out3		pr 1 pru0 gpi16		pr 1 pru0 gpo16		gpio 7.19		P8.27b
+vout 0 d20		-			emu 16			vin 1.1a d4		vin 1.0a d4		obs 13			obs 29			-			-			-			pr 1 edio in4		pr 1 edio out4		pr 1 pru0 gpi17		pr 1 pru0 gpo17		gpio 7.20		P8.28b
+vout 0 d21		-			emu 17			vin 1.1a d5		vin 1.0a d5		obs 14			obs 30			-			-			-			pr 1 edio in5		pr 1 edio out5		pr 1 pru0 gpi18		pr 1 pru0 gpo18		gpio 7.21		P8.29b
+vout 0 d22		-			emu 18			vin 1.1a d6		vin 1.0a d6		obs 15			obs 31			-			-			-			pr 1 edio in6		pr 1 edio out6		pr 1 pru0 gpi19		pr 1 pru0 gpo19		gpio 7.22		P8.30b
+vout 0 d23		-			emu 19			vin 1.1a d7		vin 1.0a d7		-			-			-			spi 2 cs3		-			pr 1 edio in7		pr 1 edio out7		pr 1 pru0 gpi20		pr 1 pru0 gpo20		gpio 7.23		P8.46b
 mdio clk		uart 2 rts		-			mii 0 col		vin 0.1a clk		vin 1.1b clk		-			-			-			-			-			pr 0 mii 0 col		pr 1 pru1 gpi0		pr 1 pru1 gpo0		gpio 4.15		eth mdio clk
-mdio data		uart 2 cts		-			mii 0 txer		vin 0.1a d0		vin 1.1b d0		-			-			-			-			-			pr 0 mii 0 rxlink	pr 1 pru1 gpi1		pr 1 pru1 gpo1		gpio 4.16		eth mdio
-rmii refclk		-			-			-			vin 0.1a d11		-			-			-			-			-			-			-			pr 1 pru1 gpi2		pr 1 pru1 gpo2		gpio 4.17		× (eth phy reset)
-uart 2 rxd		-			rmii 1 crs		mii 0 rxdv		vin 0.1a d1		vin 1.1b d1		-			spi 2 sclk		-			-			-			pr 0 mii 0 rxdv		pr 1 pru1 gpi3		pr 1 pru1 gpo3		gpio 4.18		P18.59 "uart3_rxd"
-uart 2 txd		-			rmii 1 rxer		mii 0 rxclk		vin 0.1a d2		vin 1.1b d2		-			spi 2 d1		spi 3 cs1		-			-			pr 0 mii 0 rxclk	pr 1 pru1 gpi4		pr 1 pru1 gpo4		gpio 4.19		P18.29 "uart3_txd"
-rgmii 0 txc		uart 2 cts		rmii 1 rxd1		mii 0 rxd3		vin 0.1a d3		vin 1.1b d3		-			spi 2 d0		spi 3 cs2		-			-			pr 0 mii 0 rxd3		pr 1 pru1 gpi5		pr 1 pru1 gpo5		gpio 4.20		eth 0 tx clk
-rgmii 0 txctl		uart 2 rts		rmii 1 rxd0		mii 0 rxd2		vin 0.1a d4		vin 1.1b d4		-			spi 2 cs0		spi 3 cs3		-			-			pr 0 mii 0 rxd2		pr 1 pru1 gpi6		pr 1 pru1 gpo6		gpio 4.21		eth 0 tx ctl
-rgmii 0 txd3		rmii 0 crs		-			mii 0 crs		vin 0.1a de		vin 1.1b de		-			spi 3 sclk		uart 3 rxd		-			-			pr 0 mii 0 crs		pr 1 pru1 gpi7		pr 1 pru1 gpo7		gpio 4.22		eth 0 tx d3
-rgmii 0 txd2		rmii 0 rxer		-			mii 0 rxer		vin 0.1a hsync		vin 1.1b hsync		-			spi 3 d1		uart 3 txd		-			-			pr 0 mii 0 rxer		pr 1 pru1 gpi8		pr 1 pru1 gpo8		gpio 4.23		eth 0 tx d2
-rgmii 0 txd1		rmii 0 rxd1		-			mii 0 rxd1		vin 0.1a vsync		vin 1.1b vsync		-			spi 3 d0		uart 3 cts		-			-			pr 0 mii 0 rxd1		pr 1 pru1 gpi9		pr 1 pru1 gpo9		gpio 4.24		eth 0 tx d1
-rgmii 0 txd0		rmii 0 rxd0		-			mii 0 rxd0		vin 0.1a d10		-			-			spi 3 cs0		uart 3 rts		-			-			pr 0 mii 0 rxd0		pr 1 pru1 gpi10		pr 1 pru1 gpo10		gpio 4.25		eth 0 tx d0
-rgmii 0 rxc		-			rmii 1 txen		mii 0 txclk		vin 0.1a d5		vin 1.1b d5		-			-			-			-			-			pr 0 mii 0 txclk	pr 1 pru1 gpi11		pr 1 pru1 gpo11		gpio 4.26		eth 0 rx clk
-rgmii 0 rxctl		-			rmii 1 txd1		mii 0 txd3		vin 0.1a d6		vin 1.1b d6		-			-			-			-			-			pr 0 mii 0 txd3		pr 1 pru1 gpi12		pr 1 pru1 gpo12		gpio 4.27		eth 0 rx ctl
-rgmii 0 rxd3		-			rmii 1 txd0		mii 0 txd2		vin 0.1a d7		vin 1.1b d7		-			-			-			-			-			pr 0 mii 0 txd2		pr 1 pru1 gpi13		pr 1 pru1 gpo13		gpio 4.28		eth 0 rx d3
-rgmii 0 rxd2		rmii 0 txen		-			mii 0 txen		vin 0.1a d8		-			-			-			-			-			-			pr 0 mii 0 txen		pr 1 pru1 gpi14		pr 1 pru1 gpo14		gpio 4.29		eth 0 rx d2
-rgmii 0 rxd1		rmii 0 txd1		-			mii 0 txd1		vin 0.1a d9		-			-			-			-			-			-			pr 0 mii 0 txd1		pr 1 pru1 gpi15		pr 1 pru1 gpo15		gpio 4.30		eth 0 rx d1
-rgmii 0 rxd0		rmii 0 txd0		-			mii 0 txd0		vin 0.1a fld		vin 1.1b fld		-			-			-			-			-			pr 0 mii 0 txd0		pr 1 pru1 gpi16		pr 1 pru1 gpo16		gpio 4.31		eth 0 rx d0
-usb 0 drvvbus		-			-			-			-			-			-			timer 15		-			-			-			-			-			-			gpio 5.12		usb 0 drvvbus
-usb 1 drvvbus		-			-			-			-			-			-			timer 14		-			-			-			-			-			-			gpio 5.13		-×
-gpio 5.14		mcasp 0 d8		can 1 tx		uart 9 rxd		-			-			vout 1 hsync		-			vin 1.1a hsync		i²c 2 sda		timer 0			-			-			-			gpio 5.14		P17.42 "gpio6_14"
-gpio 5.15		mcasp 0 d9		can 1 rx		uart 9 txd		-			-			vout 1 vsync		-			vin 1.1a vsync		i²c 2 scl		timer 1			-			-			-			gpio 5.15		P17.13 "gpio6_15"
-gpio 5.16		mcasp 0 d10		-			-			-			-			vout 1 fld		-			vin 1.1a fld		clkout 0		timer 2			-			-			-			gpio 5.16		P17.12 "gpio6_16"
-xref clk 0		mcasp 1 d8		mcasp 0 d4		mcasp 0 tx hclk		mcasp 4 tx hclk		-			-			vin 2.1a d0		hdq			clkout 1		timer 12		pr 1 mii 1 col		pr 1 pru1 gpi5		pr 1 pru1 gpo5		gpio 5.17		audio ic mclk
-xref clk 1		mcasp 1 d9		mcasp 0 d5		mcasp 1 tx hclk		mcasp 5 tx hclk		-			-			vin 2.1a clk		-			-			timer 13		pr 1 mii 1 crs		pr 1 pru1 gpi6		pr 1 pru1 gpo6		gpio 5.18		P17.58 "xref_clk1"
-xref clk 2		mcasp 1 d10		mcasp 0 d6		mcasp 2 tx hclk		mcasp 6 tx hclk		-			vout 1 clk		-			vin 1.1a clk		-			timer 14		-			-			-			gpio 5.19		P17.28 "xref_clk2"
-xref clk 3		mcasp 1 d11		mcasp 0 d7		mcasp 3 tx hclk		mcasp 7 tx hclk		-			vout 1 de		hdq			vin 1.1a de		clkout 2		timer 15		-			-			-			gpio 5.20		P17.41 "xref_clk3"
-mcasp 0 tx clk		-			-			-			-			-			-			vin 2.1a fld		-			-			i²c 2 sda		pr 1 mdio mdclk		pr 1 pru1 gpi7		pr 1 pru1 gpo7		gpio 6.31		rtc i²c
-mcasp 0 tx fs		-			-			-			-			-			-			vin 2.1a de		-			-			i²c 2 scl		pr 1 mdio data		-			-			gpio 6.30		rtc i²c
-mcasp 0 rx clk		mcasp 6 d2		-			-			-			-			vout 1 d0		-			vin 1.1a d0		-			i²c 3 sda		-			-			-			gpio 4.00		P17.53 "mcasp1_aclkr"
-mcasp 0 rx fs		mcasp 6 d3		-			-			-			-			vout 1 d1		-			vin 1.1a d1		-			i²c 3 scl		-			-			-			gpio 4.01		P17.46 "mcasp1_fsr"
-mcasp 0 d0		-			-			uart 5 rxd		-			-			-			vin 2.1a vsync		-			-			i²c 4 sda		pr 1 mii 0 rxer		pr 1 pru1 gpi8		pr 1 pru1 gpo8		gpio 4.02		P18.03 "mcasp1_axr0"
-mcasp 0 d1		-			-			uart 5 txd		-			-			-			vin 2.1a hsync		-			-			i²c 4 scl		pr 1 mii 0 txclk	pr 1 pru1 gpi9		pr 1 pru1 gpo9		gpio 4.03		P18.04 "mcasp1_axr1"
-mcasp 0 d2		mcasp 5 d2		-			uart 5 cts		-			-			vout 1 d2		-			vin 1.1a d2		-			-			-			-			-			gpio 4.04		P17.47 "mcasp1_axr2"
-mcasp 0 d3		mcasp 5 d3		-			uart 5 rts		-			-			vout 1 d3		-			vin 1.1a d3		-			-			-			-			-			gpio 4.05		P17.17 "mcasp1_axr3"
-mcasp 0 d4		mcasp 3 d2		-			-			-			-			vout 1 d4		-			vin 1.1a d4		-			-			-			-			-			gpio 4.06		P17.45 "mcasp1_axr4"
-mcasp 0 d5		mcasp 3 d3		-			-			-			-			vout 1 d5		-			vin 1.1a d5		-			-			-			-			-			gpio 4.07		P17.15 "mcasp1_axr5"
-mcasp 0 d6		mcasp 4 d2		-			-			-			-			vout 1 d6		-			vin 1.1a d6		-			-			-			-			-			gpio 4.08		P17.55 "mcasp1_axr6"
-mcasp 0 d7		mcasp 4 d3		-			-			-			-			vout 1 d7		-			vin 1.1a d7		-			timer 3			-			-			-			gpio 4.09		P17.25 "mcasp1_axr7"
-mcasp 0 d8		mcasp 5 d0		-			spi 2 sclk		-			-			-			vin 2.1a d15		-			-			timer 4			pr 1 mii 0 txen		pr 1 pru1 gpi10		pr 1 pru1 gpo10		gpio 4.10		P16.34 "mcasp1_axr8"
-mcasp 0 d9		mcasp 5 d1		-			spi 2 d1		-			-			-			vin 2.1a d14		-			-			timer 5			pr 1 mii 0 txd3		pr 1 pru1 gpi11		pr 1 pru1 gpo11		gpio 4.11		P16.04 "mcasp1_axr9"
-mcasp 0 d10		mcasp 5 tx clk		mcasp 5 rx clk		spi 2 d0		-			-			-			vin 2.1a d13		-			-			timer 6			pr 1 mii 0 txd2		pr 1 pru1 gpi12		pr 1 pru1 gpo12		gpio 4.12		P16.33 "mcasp1_axr10"
-mcasp 0 d11		mcasp 5 tx fs		mcasp 5 rx fs		spi 2 cs0		-			-			-			vin 2.1a d12		-			-			timer 7			pr 1 mii 0 txd1		pr 1 pru1 gpi13		pr 1 pru1 gpo13		gpio 3.17		P16.03 "mcasp1_axr11"
-mcasp 0 d12		mcasp 6 d0		-			spi 2 cs1		-			-			-			vin 2.1a d11		-			-			timer 8			pr 1 mii 0 txd0		pr 1 pru1 gpi14		pr 1 pru1 gpo14		gpio 3.18		P16.05 "mcasp1_axr12"
-mcasp 0 d13		mcasp 6 d1		-			-			-			-			-			vin 2.1a d10		-			-			timer 9			pr 1 mii 0 rxclk	pr 1 pru1 gpi15		pr 1 pru1 gpo15		gpio 5.04		P17.49 "mcasp1_axr13"
-mcasp 0 d14		mcasp 6 tx clk		mcasp 6 rx clk		-			-			-			-			vin 2.1a d9		-			-			timer 10		pr 1 mii 0 rxdv		pr 1 pru1 gpi16		pr 1 pru1 gpo16		gpio 5.05		P17.48 "mcasp1_axr14"
-mcasp 0 d15		mcasp 6 tx fs		mcasp 6 rx fs		-			-			-			-			vin 2.1a d8		-			-			timer 11		pr 1 mii 0 rxd3		pr 1 pru0 gpi20		pr 1 pru0 gpo20		gpio 5.06		P17.19 "mcasp1_axr15"
-mcasp 1 tx clk		-			-			-			-			-			-			vin 2.1a d7		-			-			-			pr 1 mii 0 rxd2		pr 1 pru0 gpi18		pr 1 pru0 gpo18		-			P17.21 "mcasp2_aclkx"
-mcasp 1 tx fs		-			-			-			-			-			-			vin 2.1a d6		-			-			-			pr 1 mii 0 rxd1		pr 1 pru0 gpi19		pr 1 pru0 gpo19		-			P17.52 "mcasp2_fsx"
-mcasp 1 rx clk		mcasp 7 d2		-			-			-			-			vout 1 d8		-			vin 1.1a d8		-			-			-			-			-			-			P17.44 "mcasp2_aclkr"
-mcasp 1 rx fs		mcasp 7 d3		-			-			-			-			vout 1 d9		-			vin 1.1a d9		-			-			-			-			-			-			P17.57 "mcasp2_fsr"
-mcasp 1 d0		-			-			-			-			-			vout 1 d10		-			vin 1.1a d10		-			-			-			-			-			-			P17.54 "mcasp2_axr0"
-mcasp 1 d1		-			-			-			-			-			vout 1 d11		-			vin 1.1a d11		-			-			-			-			-			-			P17.23 "mcasp2_axr1"
-mcasp 1 d2		mcasp 2 d2		-			-			-			-			-			vin 2.1a d5		-			-			-			pr 1 mii 0 rxd0		pr 1 pru0 gpi16		pr 1 pru0 gpo16		gpio 5.08		P17.18 "mcasp2_axr2"
-mcasp 1 d3		mcasp 2 d3		-			-			-			-			-			vin 2.1a d4		-			-			-			pr 1 mii 0 rxlink	pr 1 pru0 gpi17		pr 1 pru0 gpo17		gpio 5.09		P17.22 "mcasp2_axr3"
-mcasp 1 d4		mcasp 7 d0		-			-			-			-			vout 1 d12		-			vin 1.1a d12		-			-			-			-			-			gpio 0.04		P17.16 "mcasp2_axr4"
-mcasp 1 d5		mcasp 7 d1		-			-			-			-			vout 1 d13		-			vin 1.1a d13		-			-			-			-			-			gpio 5.07		P17.24 "mcasp2_axr5"
-mcasp 1 d6		mcasp 7 tx clk		mcasp 7 rx clk		-			-			-			vout 1 d14		-			vin 1.1a d14		-			-			-			-			-			gpio 1.29		P17.26 "mcasp2_axr6"
-mcasp 1 d7		mcasp 7 tx fs		mcasp 7 rx fs		-			-			-			vout 1 d15		-			vin 1.1a d15		-			-			-			-			-			gpio 0.05		P17.56 "mcasp2_axr7"
-mcasp 2 tx clk		mcasp 2 rx clk		mcasp 1 d12		uart 6 rxd		-			-			-			vin 2.1a d3		-			-			-			pr 1 mii 0 crs		pr 1 pru0 gpi12		pr 1 pru0 gpo12		gpio 4.13		audio ic bclk
-mcasp 2 tx fs		mcasp 2 rx fs		mcasp 1 d13		uart 6 txd		-			-			-			vin 2.1a d2		-			-			-			pr 1 mii 0 col		pr 1 pru0 gpi13		pr 1 pru0 gpo13		gpio 4.14		audio ic wclk
-mcasp 2 d0		-			mcasp 1 d14		uart 6 cts		uart 4 rxd		-			-			vin 2.1a d1		-			-			-			pr 1 mii 1 rxer		pr 1 pru0 gpi14		pr 1 pru0 gpo14		-			audio ic din
-mcasp 2 d1		-			mcasp 1 d15		uart 6 rts		uart 4 txd		-			-			vin 2.1a d0		-			vin 2.0a fld		-			pr 1 mii 1 rxlink	pr 1 pru0 gpi15		pr 1 pru0 gpo15		-			audio ic dout
-mcasp 3 tx clk		mcasp 3 rx clk		spi 2 sclk		uart 7 rxd		i²c 3 sda		-			vout 1 d16		-			vin 1.1a d16		vin 2.0a d15		-			-			-			-			-			P17.43 "mcasp4_aclkx"
-mcasp 3 tx fs		mcasp 3 rx fs		spi 2 d1		uart 7 txd		i²c 3 scl		-			vout 1 d17		-			vin 1.1a d17		vin 2.0a d14		-			-			-			-			-			P17.27 "mcasp4_fsx"
-mcasp 3 d0		-			spi 2 d0		uart 7 cts		uart 3 rxd		-			vout 1 d18		-			vin 1.1a d18		vin 2.0a d13		-			-			-			-			-			P17.11 "mcasp4_axr0"
-mcasp 3 d1		-			spi 2 cs0		uart 7 rts		uart 3 txd		-			vout 1 d19		-			vin 1.1a d19		vin 2.0a d12		-			-			pr 1 pru1 gpi0		pr 1 pru1 gpo0		-			P17.14 "mcasp4_axr1"
-mcasp 4 tx clk		mcasp 4 rx clk		spi 3 sclk		uart 8 rxd		i²c 4 sda		-			vout 1 d20		-			vin 1.1a d20		vin 2.0a d11		-			-			pr 1 pru1 gpi1		pr 1 pru1 gpo1		-			P17.10 "mcasp5_aclkx"
-mcasp 4 tx fs		mcasp 4 rx fs		spi 3 d1		uart 8 txd		i²c 4 scl		-			vout 1 d21		-			vin 1.1a d21		vin 2.0a d10		-			-			pr 1 pru1 gpi2		pr 1 pru1 gpo2		-			P17.09 "mcasp5_fsx"
-mcasp 4 d0		-			spi 3 d0		uart 8 cts		uart 2 rxd		-			vout 1 d22		-			vin 1.1a d22		vin 2.0a d9		-			pr 1 mdio mdclk		pr 1 pru1 gpi3		pr 1 pru1 gpo3		-			P17.40 "mcasp5_axr0"
-mcasp 4 d1		-			spi 3 cs0		uart 8 rts		uart 2 txd		-			vout 1 d23		-			vin 1.1a d23		vin 2.0a d8		-			pr 1 mdio data		pr 1 pru1 gpi4		pr 1 pru1 gpo4		-			P17.39 "mcasp5_axr1"
+mdio data		uart 2 cts		-			mii 0 txer		vin 0.1a d0		vin 1.1b d0		-			-			-			-			-			pr 0 mii 0 rxlink	pr 1 pru1 gpi1		pr 1 pru1 gpo1		gpio 4.16		eth mdio data
+rmii refclk		-			-			-			vin 0.1a d11		-			-			-			-			-			-			-			pr 1 pru1 gpi2		pr 1 pru1 gpo2		gpio 4.17		-
+uart 2 rxd		-			rmii 1 crs		mii 0 rxdv		vin 0.1a d1		vin 1.1b d1		-			spi 2 sclk		-			-			-			pr 0 mii 0 rxdv		pr 1 pru1 gpi3		pr 1 pru1 gpo3		gpio 4.18		usb A vbus overcurrent
+uart 2 txd		-			rmii 1 rxer		mii 0 rxclk		vin 0.1a d2		vin 1.1b d2		-			spi 2 d1		spi 3 cs1		-			-			pr 0 mii 0 rxclk	pr 1 pru1 gpi4		pr 1 pru1 gpo4		gpio 4.19		eth mii irq
+rgmii 0 txc		uart 2 cts		rmii 1 rxd1		mii 0 rxd3		vin 0.1a d3		vin 1.1b d3		-			spi 2 d0		spi 3 cs2		-			-			pr 0 mii 0 rxd3		pr 1 pru1 gpi5		pr 1 pru1 gpo5		gpio 4.20		eth mii tx clk
+rgmii 0 txctl		uart 2 rts		rmii 1 rxd0		mii 0 rxd2		vin 0.1a d4		vin 1.1b d4		-			spi 2 cs0		spi 3 cs3		-			-			pr 0 mii 0 rxd2		pr 1 pru1 gpi6		pr 1 pru1 gpo6		gpio 4.21		eth mii tx en
+rgmii 0 txd3		rmii 0 crs		-			mii 0 crs		vin 0.1a de		vin 1.1b de		-			spi 3 sclk		uart 3 rxd		-			-			pr 0 mii 0 crs		pr 1 pru1 gpi7		pr 1 pru1 gpo7		gpio 4.22		eth mii tx d3
+rgmii 0 txd2		rmii 0 rxer		-			mii 0 rxer		vin 0.1a hsync		vin 1.1b hsync		-			spi 3 d1		uart 3 txd		-			-			pr 0 mii 0 rxer		pr 1 pru1 gpi8		pr 1 pru1 gpo8		gpio 4.23		eth mii tx d2
+rgmii 0 txd1		rmii 0 rxd1		-			mii 0 rxd1		vin 0.1a vsync		vin 1.1b vsync		-			spi 3 d0		uart 3 cts		-			-			pr 0 mii 0 rxd1		pr 1 pru1 gpi9		pr 1 pru1 gpo9		gpio 4.24		eth mii tx d1
+rgmii 0 txd0		rmii 0 rxd0		-			mii 0 rxd0		vin 0.1a d10		-			-			spi 3 cs0		uart 3 rts		-			-			pr 0 mii 0 rxd0		pr 1 pru1 gpi10		pr 1 pru1 gpo10		gpio 4.25		eth mii tx d0
+rgmii 0 rxc		-			rmii 1 txen		mii 0 txclk		vin 0.1a d5		vin 1.1b d5		-			-			-			-			-			pr 0 mii 0 txclk	pr 1 pru1 gpi11		pr 1 pru1 gpo11		gpio 4.26		eth mii rx clk
+rgmii 0 rxctl		-			rmii 1 txd1		mii 0 txd3		vin 0.1a d6		vin 1.1b d6		-			-			-			-			-			pr 0 mii 0 txd3		pr 1 pru1 gpi12		pr 1 pru1 gpo12		gpio 4.27		eth mii rx en
+rgmii 0 rxd3		-			rmii 1 txd0		mii 0 txd2		vin 0.1a d7		vin 1.1b d7		-			-			-			-			-			pr 0 mii 0 txd2		pr 1 pru1 gpi13		pr 1 pru1 gpo13		gpio 4.28		eth mii rx d3
+rgmii 0 rxd2		rmii 0 txen		-			mii 0 txen		vin 0.1a d8		-			-			-			-			-			-			pr 0 mii 0 txen		pr 1 pru1 gpi14		pr 1 pru1 gpo14		gpio 4.29		eth mii rx d2
+rgmii 0 rxd1		rmii 0 txd1		-			mii 0 txd1		vin 0.1a d9		-			-			-			-			-			-			pr 0 mii 0 txd1		pr 1 pru1 gpi15		pr 1 pru1 gpo15		gpio 4.30		eth mii rx d1
+rgmii 0 rxd0		rmii 0 txd0		-			mii 0 txd0		vin 0.1a fld		vin 1.1b fld		-			-			-			-			-			pr 0 mii 0 txd0		pr 1 pru1 gpi16		pr 1 pru1 gpo16		gpio 4.31		eth mii rx d3
+usb 0 drvvbus		-			-			-			-			-			-			timer 15		-			-			-			-			-			-			gpio 5.12		P9.13b ?
+usb 1 drvvbus		-			-			-			-			-			-			timer 14		-			-			-			-			-			-			gpio 5.13		usb A vbus out en
+gpio 5.14		mcasp 0 d8		can 1 tx		uart 9 rxd		-			-			vout 1 hsync		-			vin 1.1a hsync		i²c 2 sda		timer 0			-			-			-			gpio 5.14		P9.26a
+gpio 5.15		mcasp 0 d9		can 1 rx		uart 9 txd		-			-			vout 1 vsync		-			vin 1.1a vsync		i²c 2 scl		timer 1			-			-			-			gpio 5.15		P9.24
+gpio 5.16		mcasp 0 d10		-			-			-			-			vout 1 fld		-			vin 1.1a fld		clkout 0		timer 2			-			-			-			gpio 5.16		pmic irq
+xref clk 0		mcasp 1 d8		mcasp 0 d4		mcasp 0 tx hclk		mcasp 4 tx hclk		-			-			vin 2.1a d0		hdq			clkout 1		timer 12		pr 1 mii 1 col		pr 1 pru1 gpi5		pr 1 pru1 gpo5		gpio 5.17		P9.25
+xref clk 1		mcasp 1 d9		mcasp 0 d5		mcasp 1 tx hclk		mcasp 5 tx hclk		-			-			vin 2.1a clk		-			-			timer 13		pr 1 mii 1 crs		pr 1 pru1 gpi6		pr 1 pru1 gpo6		gpio 5.18		P8.09
+xref clk 2		mcasp 1 d10		mcasp 0 d6		mcasp 2 tx hclk		mcasp 6 tx hclk		-			vout 1 clk		-			vin 1.1a clk		-			timer 14		-			-			-			gpio 5.19		P9.22a
+xref clk 3		mcasp 1 d11		mcasp 0 d7		mcasp 3 tx hclk		mcasp 7 tx hclk		-			vout 1 de		hdq			vin 1.1a de		clkout 2		timer 15		-			-			-			gpio 5.20		P9.41a
+mcasp 0 tx clk		-			-			-			-			-			-			vin 2.1a fld		-			-			i²c 2 sda		pr 1 mdio mdclk		pr 1 pru1 gpi7		pr 1 pru1 gpo7		gpio 6.31		P9.31b
+mcasp 0 tx fs		-			-			-			-			-			-			vin 2.1a de		-			-			i²c 2 scl		pr 1 mdio data		-			-			gpio 6.30		P9.29b
+mcasp 0 rx clk		mcasp 6 d2		-			-			-			-			vout 1 d0		-			vin 1.1a d0		-			i²c 3 sda		-			-			-			gpio 4.00		P9.12
+mcasp 0 rx fs		mcasp 6 d3		-			-			-			-			vout 1 d1		-			vin 1.1a d1		-			i²c 3 scl		-			-			-			gpio 4.01		P9.27b
+mcasp 0 d0		-			-			uart 5 rxd		-			-			-			vin 2.1a vsync		-			-			i²c 4 sda		pr 1 mii 0 rxer		pr 1 pru1 gpi8		pr 1 pru1 gpo8		gpio 4.02		P9.18b
+mcasp 0 d1		-			-			uart 5 txd		-			-			-			vin 2.1a hsync		-			-			i²c 4 scl		pr 1 mii 0 txclk	pr 1 pru1 gpi9		pr 1 pru1 gpo9		gpio 4.03		P9.17b
+mcasp 0 d2		mcasp 5 d2		-			uart 5 cts		-			-			vout 1 d2		-			vin 1.1a d2		-			-			-			-			-			gpio 4.04		-
+mcasp 0 d3		mcasp 5 d3		-			uart 5 rts		-			-			vout 1 d3		-			vin 1.1a d3		-			-			-			-			-			gpio 4.05		user led 1
+mcasp 0 d4		mcasp 3 d2		-			-			-			-			vout 1 d4		-			vin 1.1a d4		-			-			-			-			-			gpio 4.06		-
+mcasp 0 d5		mcasp 3 d3		-			-			-			-			vout 1 d5		-			vin 1.1a d5		-			-			-			-			-			gpio 4.07		eMMC reset
+mcasp 0 d6		mcasp 4 d2		-			-			-			-			vout 1 d6		-			vin 1.1a d6		-			-			-			-			-			gpio 4.08		-
+mcasp 0 d7		mcasp 4 d3		-			-			-			-			vout 1 d7		-			vin 1.1a d7		-			timer 3			-			-			-			gpio 4.09		-
+mcasp 0 d8		mcasp 5 d0		-			spi 2 sclk		-			-			-			vin 2.1a d15		-			-			timer 4			pr 1 mii 0 txen		pr 1 pru1 gpi10		pr 1 pru1 gpo10		gpio 4.10		P9.31a
+mcasp 0 d9		mcasp 5 d1		-			spi 2 d1		-			-			-			vin 2.1a d14		-			-			timer 5			pr 1 mii 0 txd3		pr 1 pru1 gpi11		pr 1 pru1 gpo11		gpio 4.11		P9.29a
+mcasp 0 d10		mcasp 5 tx clk		mcasp 5 rx clk		spi 2 d0		-			-			-			vin 2.1a d13		-			-			timer 6			pr 1 mii 0 txd2		pr 1 pru1 gpi12		pr 1 pru1 gpo12		gpio 4.12		P9.30
+mcasp 0 d11		mcasp 5 tx fs		mcasp 5 rx fs		spi 2 cs0		-			-			-			vin 2.1a d12		-			-			timer 7			pr 1 mii 0 txd1		pr 1 pru1 gpi13		pr 1 pru1 gpo13		gpio 3.17		P9.28
+mcasp 0 d12		mcasp 6 d0		-			spi 2 cs1		-			-			-			vin 2.1a d11		-			-			timer 8			pr 1 mii 0 txd0		pr 1 pru1 gpi14		pr 1 pru1 gpo14		gpio 3.18		P9.42a
+mcasp 0 d13		mcasp 6 d1		-			-			-			-			-			vin 2.1a d10		-			-			timer 9			pr 1 mii 0 rxclk	pr 1 pru1 gpi15		pr 1 pru1 gpo15		gpio 5.04		P8.10
+mcasp 0 d14		mcasp 6 tx clk		mcasp 6 rx clk		-			-			-			-			vin 2.1a d9		-			-			timer 10		pr 1 mii 0 rxdv		pr 1 pru1 gpi16		pr 1 pru1 gpo16		gpio 5.05		P8.07
+mcasp 0 d15		mcasp 6 tx fs		mcasp 6 rx fs		-			-			-			-			vin 2.1a d8		-			-			timer 11		pr 1 mii 0 rxd3		pr 1 pru0 gpi20		pr 1 pru0 gpo20		gpio 5.06		P8.08
+mcasp 1 tx clk		-			-			-			-			-			-			vin 2.1a d7		-			-			-			pr 1 mii 0 rxd2		pr 1 pru0 gpi18		pr 1 pru0 gpo18		-			bluetooth audio aclkx
+mcasp 1 tx fs		-			-			-			-			-			-			vin 2.1a d6		-			-			-			pr 1 mii 0 rxd1		pr 1 pru0 gpi19		pr 1 pru0 gpo19		-			bluetooth audio fsx
+mcasp 1 rx clk		mcasp 7 d2		-			-			-			-			vout 1 d8		-			vin 1.1a d8		-			-			-			-			-			-			-
+mcasp 1 rx fs		mcasp 7 d3		-			-			-			-			vout 1 d9		-			vin 1.1a d9		-			-			-			-			-			-			-
+mcasp 1 d0		-			-			-			-			-			vout 1 d10		-			vin 1.1a d10		-			-			-			-			-			-			bluetooth audio pcm in
+mcasp 1 d1		-			-			-			-			-			vout 1 d11		-			vin 1.1a d11		-			-			-			-			-			-			bluetooth audio pcm out
+mcasp 1 d2		mcasp 2 d2		-			-			-			-			-			vin 2.1a d5		-			-			-			pr 1 mii 0 rxd0		pr 1 pru0 gpi16		pr 1 pru0 gpo16		gpio 5.08		-
+mcasp 1 d3		mcasp 2 d3		-			-			-			-			-			vin 2.1a d4		-			-			-			pr 1 mii 0 rxlink	pr 1 pru0 gpi17		pr 1 pru0 gpo17		gpio 5.09		-
+mcasp 1 d4		mcasp 7 d0		-			-			-			-			vout 1 d12		-			vin 1.1a d12		-			-			-			-			-			gpio 0.04		-
+mcasp 1 d5		mcasp 7 d1		-			-			-			-			vout 1 d13		-			vin 1.1a d13		-			-			-			-			-			gpio 5.07		-
+mcasp 1 d6		mcasp 7 tx clk		mcasp 7 rx clk		-			-			-			vout 1 d14		-			vin 1.1a d14		-			-			-			-			-			gpio 1.29		-
+mcasp 1 d7		mcasp 7 tx fs		mcasp 7 rx fs		-			-			-			vout 1 d15		-			vin 1.1a d15		-			-			-			-			-			gpio 0.05		-
+mcasp 2 tx clk		mcasp 2 rx clk		mcasp 1 d12		uart 6 rxd		-			-			-			vin 2.1a d3		-			-			-			pr 1 mii 0 crs		pr 1 pru0 gpi12		pr 1 pru0 gpo12		gpio 4.13		-
+mcasp 2 tx fs		mcasp 2 rx fs		mcasp 1 d13		uart 6 txd		-			-			-			vin 2.1a d2		-			-			-			pr 1 mii 0 col		pr 1 pru0 gpi13		pr 1 pru0 gpo13		gpio 4.14		-
+mcasp 2 d0		-			mcasp 1 d14		uart 6 cts		uart 4 rxd		-			-			vin 2.1a d1		-			-			-			pr 1 mii 1 rxer		pr 1 pru0 gpi14		pr 1 pru0 gpo14		-			P9.11a
+mcasp 2 d1		-			mcasp 1 d15		uart 6 rts		uart 4 txd		-			-			vin 2.1a d0		-			vin 2.0a fld		-			pr 1 mii 1 rxlink	pr 1 pru0 gpi15		pr 1 pru0 gpo15		-			P9.13a
+mcasp 3 tx clk		mcasp 3 rx clk		spi 2 sclk		uart 7 rxd		i²c 3 sda		-			vout 1 d16		-			vin 1.1a d16		vin 2.0a d15		-			-			-			-			-			P8.38b
+mcasp 3 tx fs		mcasp 3 rx fs		spi 2 d1		uart 7 txd		i²c 3 scl		-			vout 1 d17		-			vin 1.1a d17		vin 2.0a d14		-			-			-			-			-			P8.37b
+mcasp 3 d0		-			spi 2 d0		uart 7 cts		uart 3 rxd		-			vout 1 d18		-			vin 1.1a d18		vin 2.0a d13		-			-			-			-			-			P8.31b
+mcasp 3 d1		-			spi 2 cs0		uart 7 rts		uart 3 txd		-			vout 1 d19		-			vin 1.1a d19		vin 2.0a d12		-			-			pr 1 pru1 gpi0		pr 1 pru1 gpo0		-			P8.32b
+mcasp 4 tx clk		mcasp 4 rx clk		spi 3 sclk		uart 8 rxd		i²c 4 sda		-			vout 1 d20		-			vin 1.1a d20		vin 2.0a d11		-			-			pr 1 pru1 gpi1		pr 1 pru1 gpo1		-			-
+mcasp 4 tx fs		mcasp 4 rx fs		spi 3 d1		uart 8 txd		i²c 4 scl		-			vout 1 d21		-			vin 1.1a d21		vin 2.0a d10		-			-			pr 1 pru1 gpi2		pr 1 pru1 gpo2		-			-
+mcasp 4 d0		-			spi 3 d0		uart 8 cts		uart 2 rxd		-			vout 1 d22		-			vin 1.1a d22		vin 2.0a d9		-			pr 1 mdio mdclk		pr 1 pru1 gpi3		pr 1 pru1 gpo3		-			-
+mcasp 4 d1		-			spi 3 cs0		uart 8 rts		uart 2 txd		-			vout 1 d23		-			vin 1.1a d23		vin 2.0a d8		-			pr 1 mdio data		pr 1 pru1 gpi4		pr 1 pru1 gpo4		-			-
 mmc 0 clk		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.21		μSD clk
 mmc 0 cmd		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.22		μSD cmd
-mmc 0 dat0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.23		μSD dat0
-mmc 0 dat1		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.24		μSD dat1
-mmc 0 dat2		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.25		μSD dat2
-mmc 0 dat3		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.26		μSD dat3
-mmc 0 sdcd		-			-			uart 5 rxd		i²c 3 sda		-			-			-			-			-			-			-			-			-			gpio 5.27		μSD card detect
-mmc 0 sdwp		-			-			uart 5 txd		i²c 3 scl		-			-			-			-			-			-			-			-			-			gpio 5.28		-×
-gpio 5.10		mdio clk		i²c 2 sda		-			vin 0.1b hsync		-			-			-			-			vin 2.0a clk		pwm 1 A			pr 1 mii 1 txclk	pr 1 pru0 gpi0		pr 1 pru0 gpo0		gpio 5.10		P17.05 "gpio6_10"
-gpio 5.11		mdio data		i²c 2 scl		-			vin 0.1b vsync		-			-			-			-			vin 2.0a de		pwm 1 B			pr 1 mii 1 txen		pr 1 pru0 gpi1		pr 1 pru0 gpo1		gpio 5.11		P17.03 "gpio6_11"
-mmc 2 clk		-			-			-			vin 0.1b d7		-			-			-			-			vin 2.0a d7		pwm 1 trip		pr 1 mii 1 txd3		pr 1 pru0 gpi2		pr 1 pru0 gpo2		gpio 5.29		P17.34 "mmc3_clk"
-mmc 2 cmd		spi 2 sclk		-			-			vin 0.1b d6		-			-			-			-			vin 2.0a d6		cap 1			pr 1 mii 1 txd2		pr 1 pru0 gpi3		pr 1 pru0 gpo3		gpio 5.30		P17.04 "mmc3_cmd"
-mmc 2 dat0		spi 2 d1		uart 4 rxd		-			vin 0.1b d5		-			-			-			-			vin 2.0a d5		qep 2 A			pr 1 mii 1 txd1		pr 1 pru0 gpi4		pr 1 pru0 gpo4		gpio 5.31		P17.07 "mmc3_dat0"
-mmc 2 dat1		spi 2 d0		uart 4 txd		-			vin 0.1b d4		-			-			-			-			vin 2.0a d4		qep 2 B			pr 1 mii 1 txd0		pr 1 pru0 gpi5		pr 1 pru0 gpo5		gpio 6.00		P17.36 "mmc3_dat1"
-mmc 2 dat2		spi 2 cs0		uart 4 cts		-			vin 0.1b d3		-			-			-			-			vin 2.0a d3		qep 2 index		pr 1 mii 1 rxclk	pr 1 pru0 gpi6		pr 1 pru0 gpo6		gpio 6.01		P17.08 "mmc3_dat2"
-mmc 2 dat3		spi 2 cs1		uart 4 rts		-			vin 0.1b d2		-			-			-			-			vin 2.0a d2		qep 2 strobe		pr 1 mii 1 rxdv		pr 1 pru0 gpi7		pr 1 pru0 gpo7		gpio 6.02		P17.33 "mmc3_dat3"
-mmc 2 dat4		spi 3 sclk		uart 9 rxd		-			vin 0.1b d1		-			-			-			-			vin 2.0a d1		pwm 2 A			pr 1 mii 1 rxd3		pr 1 pru0 gpi8		pr 1 pru0 gpo8		gpio 0.22		P17.37 "mmc3_dat4"
-mmc 2 dat5		spi 3 d1		uart 9 txd		-			vin 0.1b d0		-			-			-			-			vin 2.0a d0		pwm 2 B			pr 1 mii 1 rxd2		pr 1 pru0 gpi9		pr 1 pru0 gpo9		gpio 0.23		P17.35 "mmc3_dat5"
-mmc 2 dat6		spi 3 d0		uart 9 cts		-			vin 0.1b de		-			-			-			-			vin 2.0a hsync		pwm 2 trip		pr 1 mii 1 rxd1		pr 1 pru0 gpi10		pr 1 pru0 gpo10		gpio 0.24		P17.38 "mmc3_dat6"
-mmc 2 dat7		spi 3 cs0		uart 9 rts		-			vin 0.1b clk		-			-			-			-			vin 2.0a vsync		cap 2			pr 1 mii 1 rxd0		pr 1 pru0 gpi11		pr 1 pru0 gpo11		gpio 0.25		P17.06 "mmc3_dat7"
-spi 0 sclk		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.07		P17.51 "spi1_sclk"
-spi 0 d1		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.08		led usr 1
-spi 0 d0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.09		led usr 0
-spi 0 cs0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.10		hdmi ct hpd
-spi 0 cs1		-			sata led		spi 1 cs1		-			-			-			-			-			-			-			-			-			-			gpio 6.11		ddr vtt enable
-spi 0 cs2		uart 3 rxd		mmc 2 sdcd		spi 1 cs2		can 1 tx		mdio clk		hdmi hpd		-			-			-			-			-			-			-			gpio 6.12		hdmi hpd
-spi 0 cs3		uart 3 txd		mmc 2 sdwp		spi 1 cs3		can 1 rx		mdio data		hdmi cec		-			-			-			-			-			-			-			gpio 6.13		hdmi cec
-spi 1 sclk		uart 2 rxd		-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.14		led usr 2
-spi 1 d1		uart 2 txd		-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.15		led usr 3
-spi 1 d0		uart 2 cts		uart 4 rxd		-			-			-			-			-			-			-			-			-			-			-			gpio 6.16		tmp102 irq
-spi 1 cs0		uart 2 rts		uart 4 txd		-			-			-			-			-			-			-			-			-			-			-			gpio 6.17		usb 2 oc
-can 0 tx		-			uart 7 rxd		mmc 1 sdcd		-			-			hdmi hpd		-			-			-			-			-			-			-			gpio 0.14		P17.50 "dcan1_tx"
-can 0 rx		-			uart 7 txd		mmc 1 sdwp		sata led		-			hdmi cec		-			-			-			-			-			-			-			gpio 0.15		P17.20 "dcan1_rx"
+mmc 0 dat0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.23		μSD d0
+mmc 0 dat1		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.24		μSD d1
+mmc 0 dat2		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.25		μSD d2
+mmc 0 dat3		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 5.26		μSD d3
+mmc 0 sdcd		-			-			uart 5 rxd		i²c 3 sda		-			-			-			-			-			-			-			-			-			gpio 5.27		μSD cd
+mmc 0 sdwp		-			-			uart 5 txd		i²c 3 scl		-			-			-			-			-			-			-			-			-			gpio 5.28		-
+gpio 5.10		mdio clk		i²c 2 sda		-			vin 0.1b hsync		-			-			-			-			vin 2.0a clk		pwm 1 A			pr 1 mii 1 txclk	pr 1 pru0 gpi0		pr 1 pru0 gpo0		gpio 5.10		-
+gpio 5.11		mdio data		i²c 2 scl		-			vin 0.1b vsync		-			-			-			-			vin 2.0a de		pwm 1 B			pr 1 mii 1 txen		pr 1 pru0 gpi1		pr 1 pru0 gpo1		gpio 5.11		-
+mmc 2 clk		-			-			-			vin 0.1b d7		-			-			-			-			vin 2.0a d7		pwm 1 trip		pr 1 mii 1 txd3		pr 1 pru0 gpi2		pr 1 pru0 gpo2		gpio 5.29		P8.21
+mmc 2 cmd		spi 2 sclk		-			-			vin 0.1b d6		-			-			-			-			vin 2.0a d6		cap 1			pr 1 mii 1 txd2		pr 1 pru0 gpi3		pr 1 pru0 gpo3		gpio 5.30		P8.20
+mmc 2 dat0		spi 2 d1		uart 4 rxd		-			vin 0.1b d5		-			-			-			-			vin 2.0a d5		qep 2 A			pr 1 mii 1 txd1		pr 1 pru0 gpi4		pr 1 pru0 gpo4		gpio 5.31		P8.25
+mmc 2 dat1		spi 2 d0		uart 4 txd		-			vin 0.1b d4		-			-			-			-			vin 2.0a d4		qep 2 B			pr 1 mii 1 txd0		pr 1 pru0 gpi5		pr 1 pru0 gpo5		gpio 6.00		P8.24
+mmc 2 dat2		spi 2 cs0		uart 4 cts		-			vin 0.1b d3		-			-			-			-			vin 2.0a d3		qep 2 index		pr 1 mii 1 rxclk	pr 1 pru0 gpi6		pr 1 pru0 gpo6		gpio 6.01		P8.05
+mmc 2 dat3		spi 2 cs1		uart 4 rts		-			vin 0.1b d2		-			-			-			-			vin 2.0a d2		qep 2 strobe		pr 1 mii 1 rxdv		pr 1 pru0 gpi7		pr 1 pru0 gpo7		gpio 6.02		P8.06
+mmc 2 dat4		spi 3 sclk		uart 9 rxd		-			vin 0.1b d1		-			-			-			-			vin 2.0a d1		pwm 2 A			pr 1 mii 1 rxd3		pr 1 pru0 gpi8		pr 1 pru0 gpo8		gpio 0.22		P8.23
+mmc 2 dat5		spi 3 d1		uart 9 txd		-			vin 0.1b d0		-			-			-			-			vin 2.0a d0		pwm 2 B			pr 1 mii 1 rxd2		pr 1 pru0 gpi9		pr 1 pru0 gpo9		gpio 0.23		P8.22
+mmc 2 dat6		spi 3 d0		uart 9 cts		-			vin 0.1b de		-			-			-			-			vin 2.0a hsync		pwm 2 trip		pr 1 mii 1 rxd1		pr 1 pru0 gpi10		pr 1 pru0 gpo10		gpio 0.24		P8.03
+mmc 2 dat7		spi 3 cs0		uart 9 rts		-			vin 0.1b clk		-			-			-			-			vin 2.0a vsync		cap 2			pr 1 mii 1 rxd0		pr 1 pru0 gpi11		pr 1 pru0 gpo11		gpio 0.25		P8.04
+spi 0 sclk		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.07		-
+spi 0 d1		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.08		-
+spi 0 d0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.09		-
+spi 0 cs0		-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.10		-
+spi 0 cs1		-			sata led		spi 1 cs1		-			-			-			-			-			-			-			-			-			-			gpio 6.11		P9.23
+spi 0 cs2		uart 3 rxd		mmc 2 sdcd		spi 1 cs2		can 1 tx		mdio clk		hdmi hpd		-			-			-			-			-			-			-			gpio 6.12		hdmi ddc hpd
+spi 0 cs3		uart 3 txd		mmc 2 sdwp		spi 1 cs3		can 1 rx		mdio data		hdmi cec		-			-			-			-			-			-			-			gpio 6.13		hdmi ddc cec
+spi 1 sclk		uart 2 rxd		-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.14		P9.22b
+spi 1 d1		uart 2 txd		-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.15		P9.21b
+spi 1 d0		uart 2 cts		uart 4 rxd		-			-			-			-			-			-			-			-			-			-			-			gpio 6.16		P9.18a
+spi 1 cs0		uart 2 rts		uart 4 txd		-			-			-			-			-			-			-			-			-			-			-			gpio 6.17		P9.17a
+can 0 tx		-			uart 7 rxd		mmc 1 sdcd		-			-			hdmi hpd		-			-			-			-			-			-			-			gpio 0.14		-
+can 0 rx		-			uart 7 txd		mmc 1 sdwp		sata led		-			hdmi cec		-			-			-			-			-			-			-			gpio 0.15		-
 -			-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.20		-
 -			-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 6.21		-
-uart 0 rxd		-			-			mmc 3 sdcd		-			-			-			-			-			-			-			-			-			-			gpio 6.22		P18.30 "uart1_rxd"
-uart 0 txd		-			-			mmc 3 sdwp		-			-			-			-			-			-			-			-			-			-			gpio 6.23		P18.60 "uart1_txd"
-uart 0 cts		-			uart 8 rxd		mmc 3 clk		-			-			-			-			-			-			-			-			-			-			gpio 6.24		-×
-uart 0 rts		-			uart 8 txd		mmc 3 cmd		-			-			-			-			-			-			-			-			-			-			gpio 6.25		-usb 1 id (low)
-uart 1 rxd		uart 2 cts		uart 2 rctx		mmc 3 dat0		uart 1 rxd		uart 0 dcd		-			-			-			-			-			-			-			-			gpio 6.26		eth 1 irq
-uart 1 txd		uart 2 rts		uart 2 sd		mmc 3 dat1		uart 1 txd		uart 0 dsr		-			-			-			-			-			-			-			-			gpio 6.27		eth 0 irq
-uart 1 cts		-			uart 2 rxd		mmc 3 dat2		uart 9 rxd		uart 0 dtr		-			-			-			-			-			-			-			-			gpio 0.16		console rxd
-uart 1 rts		uart 2 txd		uart 2 irtx		mmc 3 dat3		uart 9 txd		uart 0 ri		-			-			-			-			-			-			-			-			gpio 0.17		console txd
-i²c 0 sda		-			-			-			-			-			-			-			-			-			-			-			-			-			-			i²c sda
-i²c 0 scl		-			-			-			-			-			-			-			-			-			-			-			-			-			-			i²c scl
-i²c 1 sda		hdmi ddc scl		-			-			-			-			-			-			-			-			-			-			-			-			-			hdmi i²c sda
-i²c 1 scl		hdmi ddc sda		-			-			-			-			-			-			-			-			-			-			-			-			-			hdmi i²c scl
--			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-i2c3_sda
--			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-i2c3_scl
-wakeup 0		can 0 rx		-			-			-			-			-			-			-			-			-			-			-			-			gpi  0.00		pmic irq
-wakeup 1		can 1 rx		-			-			-			-			-			-			-			-			-			-			-			-			gpi  0.01		-wakeup1
-wakeup 2		sys irq 1		-			-			-			-			-			-			-			-			-			-			-			-			gpi  0.02		-wakeup2
-wakeup 3		sys irq 0		-			-			-			-			-			-			-			-			-			-			-			-			gpi  0.03		-P18.35 / rtc wakeup
-on/off			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-power request
-rtc por			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-power-on reset
+uart 0 rxd		-			-			mmc 3 sdcd		-			-			-			-			-			-			-			-			-			-			gpio 6.22		console in
+uart 0 txd		-			-			mmc 3 sdwp		-			-			-			-			-			-			-			-			-			-			gpio 6.23		console out
+uart 0 cts		-			uart 8 rxd		mmc 3 clk		-			-			-			-			-			-			-			-			-			-			gpio 6.24		wifi sdio clk
+uart 0 rts		-			uart 8 txd		mmc 3 cmd		-			-			-			-			-			-			-			-			-			-			gpio 6.25		wifi sdio cmd
+uart 1 rxd		uart 2 cts		uart 2 rctx		mmc 3 dat0		uart 1 rxd		uart 0 dcd		-			-			-			-			-			-			-			-			gpio 6.26		wifi sdio d0
+uart 1 txd		uart 2 rts		uart 2 sd		mmc 3 dat1		uart 1 txd		uart 0 dsr		-			-			-			-			-			-			-			-			gpio 6.27		wifi sdio d1
+uart 1 cts		-			uart 2 rxd		mmc 3 dat2		uart 9 rxd		uart 0 dtr		-			-			-			-			-			-			-			-			gpio 0.16		wifi sdio d2
+uart 1 rts		uart 2 txd		uart 2 irtx		mmc 3 dat3		uart 9 txd		uart 0 ri		-			-			-			-			-			-			-			-			gpio 0.17		wifi sdio d3
+i²c 0 sda		-			-			-			-			-			-			-			-			-			-			-			-			-			-			local i²c sda
+i²c 0 scl		-			-			-			-			-			-			-			-			-			-			-			-			-			-			local i²c scl
+i²c 1 sda		hdmi ddc scl		-			-			-			-			-			-			-			-			-			-			-			-			-			hdmi ddc scl
+i²c 1 scl		hdmi ddc sda		-			-			-			-			-			-			-			-			-			-			-			-			-			hdmi ddc sda
+-			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-
+-			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-
+wakeup 0		can 0 rx		-			-			-			-			-			-			-			-			-			-			-			-			gpi  0.00		-
+wakeup 1		can 1 rx		-			-			-			-			-			-			-			-			-			-			-			-			gpi  0.01		-
+wakeup 2		sys irq 1		-			-			-			-			-			-			-			-			-			-			-			-			gpi  0.02		-
+wakeup 3		sys irq 0		-			-			-			-			-			-			-			-			-			-			-			-			gpi  0.03		-
+on/off			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-
+rtc por			-			-			-			-			-			-			-			-			-			-			-			-			-			-			rtc por reset
 tms			-			-			-			-			-			-			-			-			-			-			-			-			-			-			jtag tms
 tdi			-			-			-			-			-			-			-			-			-			-			-			-			-			gpi  7.27		jtag tdi
 tdo			-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 7.28		jtag tdo
 tck			-			-			-			-			-			-			-			-			-			-			-			-			-			-			jtag tclk
-trst			-			-			-			-			-			-			-			-			-			-			-			-			-			-			jtag trstn
+trst			-			-			-			-			-			-			-			-			-			-			-			-			-			-			jtag trst
 rtck			-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 7.29		jtag rtck
 emu 0			-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 7.30		jtag emu0
 emu 1			-			-			-			-			-			-			-			-			-			-			-			-			-			gpio 7.31		jtag emu1
 -			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-
 -			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-
 -			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-
-reset			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-reset in
-nmi			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-nmi
-reset out		-			-			-			-			-			-			-			-			-			-			-			-			-			-			-P18.33 reset out
+reset			-			-			-			-			-			-			-			-			-			-			-			-			-			-			reset
+nmi			-			-			-			-			-			-			-			-			-			-			-			-			-			-			-
+reset out		-			-			-			-			-			-			-			-			-			-			-			-			-			-			reset out
