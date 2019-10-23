@@ -100,7 +100,7 @@ while( <> ) {
 			name  => $4,
 		);
 		my $prevend = @gpiochip && $gpiochip[-1]{end};
-		$chip{index} == @gpiochip  or die;
+		$chip{index} == @gpiochip  or last;
 		$chip{start} >= $prevend  or die;
 		$chip{end} > $chip{start}  or die;
 		die if exists $gpiochip{ $chip{name} };
