@@ -92,7 +92,7 @@ while( <> ) {
 	s/\s*\z//;
 	length  or next;
 	if( /^gpiochip/gc ) {
-		m!\G(\d+): GPIOs (\d+)-(\d+), parent: platform/([\w\@:.-]+\w), !gc  or die;
+		m!\G(\d+): GPIOs (\d+)-(\d+), parent: (\S+), !gc  or die;
 		my %chip = (
 			index => 0 + $1,
 			start => 0 + $2,
@@ -104,7 +104,7 @@ while( <> ) {
 		$chip{start} >= $prevend  or die;
 		$chip{end} > $chip{start}  or die;
 		die if exists $gpiochip{ $chip{name} };
-		if( $chip{name} =~ /^([0-9a-f]{5}000)\.gpio\z/ ) {
+		if( $chip{name} =~ m!^platform/([0-9a-f]{5}000)\.gpio\z! ) {
 			$platgpio  or die;
 			$chip{start} == $prevend  or die;
 			$chip{end} == $chip{start} + 32  or die;
