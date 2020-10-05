@@ -74,6 +74,8 @@ while( <> ) {
 	s/^(.*)\.([^.]+)\z/$2\@$1/ for @path;
 	my $path = join '/', @path;
 	/\G \(GPIO UNCLAIMED\)/gc  or die;
+	$usage[ $pin ] = [ $path ];
+	next if /\G\s*\z/gc;
 	/\G function (\S+) group (\S+)\s*\z/gc && $1 eq $2  or die;
 	$usage[ $pin ] = [ $path, $1 ];
 }
