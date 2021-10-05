@@ -62,7 +62,15 @@ Which mux option is selected for the pin (0-7) and a short description thereof. 
 
 ![](/doc/images/gpio.png)
 
-If a pin is muxed as gpio and the gpio functionality has been requested in the kernel (e.g. the gpio is exported via sysfs), then the direction and level is shown. Arrow to the right ("hi >>") means output, arrow to the left ("<< hi") means input.
+If a pin is muxed as gpio and this gpio is "in use" (by a kernel driver or exported to userspace), then the current state of the gpio is shown:
+
+- `lo >>`  output, driven low
+- `hi >>`  output, driven high
+- `<< lo`  input, detected low
+- `<< hi`  input, detected high
+- `<!   `  input, level unknown because receiver is disabled
+
+If the kernel considers the gpio to be unused then information about its state is unavailable and the gpio will be grayed out.
 
 ### Usage
 
