@@ -174,7 +174,8 @@ while( <> ) {
 	/\G (0|[1-9]\d*) /gc  or die "parse error";
 	my $pin = 0 + $1;
 
-	/\G(?|\(PIN$pin\) ([0-9a-f]{8})(?:\.0)?|\(([0-9a-f]{8})(?:\.0)?\)) /gc
+	/\G\(PIN$pin\) (?:\d+:\S+ )?([0-9a-f]{8})(?:\.0)? /gc
+		or /\G\(([0-9a-f]{8})(?:\.0)?\) /gc
 		or die "parse error";
 	hex $1 == 0x4a003400 + 4 * $pin  or die "sanity check failed";
 
