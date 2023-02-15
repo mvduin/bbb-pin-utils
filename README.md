@@ -23,7 +23,7 @@ sudo show-pins -vv	# show all configurable pins
 
 ![](/doc/images/show-pins.png)
 
-Every line represents one of the configurable pins of the [AM3358 SoC](http://www.ti.com/product/am3358) on the BeagleBone White. By default only the 70 pins that connect to the expansion headers P8 and P9 are listed. If the `-v` option is passed, more pins that may be of interest are shown. If the `-v` option is given twice, all pins in the pinconfig array are shown except the ddr3 pins.
+Every line represents one of the configurable pins of the [AM3358 SoC](http://www.ti.com/product/am3358) on the BeagleBone White. By default only the 70 pins that connect to the expansion headers P8 and P9 are listed. If the `-v` (or `--verbose`) option is passed, more pins that may be of interest are shown. If the `-v` option is given twice, all pins in the pinconfig array are shown except the ddr3 pins.
 
 ### Description
 
@@ -39,6 +39,8 @@ If a pin has additional connections on the BBW or other special considerations, 
 ### Pin index
 
 The second column is the index into the SoC's pin-config array. By default the output is sorted by this, which often helps to get functionally related pins grouped together and in a logical order.
+
+If the `-A` (or `--address`) option is passed once then this column will instead show the offset from the start of the array in hexadecimal.  If the option is passed twice, it shows the last three hexadecimal digits of the address of the pin config register, and if the option is passed more times the full address is shown.
 
 ### IO Cell Config
 
