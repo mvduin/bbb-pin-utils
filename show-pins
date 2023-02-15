@@ -41,12 +41,22 @@ tie my %DG, style => 32, 2;
 # parse options
 
 my $verbose = 0;
+my $show_address = 0;
 
-while( @ARGV && $ARGV[0] =~ s/^-v/-/ ) {
-	++$verbose;
-	shift if $ARGV[0] eq '-';
+while( @ARGV && $ARGV[0] =~ /^-./s ) {
+	my $opt = $ARGV[0] =~ s/^(-\w)(?=\w)/-/ ? $1 : shift;
+	if( $opt eq '--verbose' || $opt eq '-v' ) {
+		++$verbose;
+	} elsif( $opt eq '--address' || $opt eq '-A' ) {
+		++$show_address;
+	} elsif( $opt eq '--' ) {
+		last;
+	} else {
+		die "Unknown option: $opt\n";
+	}
 }
-die "unexpected argument: $ARGV[0]\n"  if @ARGV;
+
+die "Unexpected argument: $ARGV[0]\n"  if @ARGV;
 
 sub setglob {
 	my( $pattern ) = @_;
@@ -170,7 +180,14 @@ while( <> ) {
 
 	$function = qq/$slew $rx $pull $Y{$mux} $function/;
 
-	printf "%-32s $Y{'%3s'} %s\n", $label, $pin, $function;
+	if( $show_address ) {
+		$pin *= 4;
+		$pin += 0x800  if $show_address > 1;
+		$pin += 0x44e10000  if $show_address > 2;
+		printf "%-32s $Y{'%03x'} %s\n", $label, $pin, $function;
+	} else {
+		printf "%-32s $Y{'%3s'} %s\n", $label, $pin, $function;
+	}
 }
 
 __DATA__
